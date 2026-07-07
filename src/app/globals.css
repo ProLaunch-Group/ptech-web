@@ -1,8 +1,9 @@
 @import 'tailwindcss';
 
 :root {
+  /* Light mode tokens: White background, near-black text */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
 }
 
 @theme inline {
@@ -14,8 +15,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Dark mode tokens: Near-black background, off-white text */
+    --background: #ffffff;
+    --foreground: #000000;
   }
 }
 
