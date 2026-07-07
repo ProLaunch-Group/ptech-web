@@ -1,11 +1,5 @@
-
 function ServicesPage() {
-
-    return (
-        <section>
-            ServicesPage Coming soon....
-            </section>
-    )
+  return <section>ServicesPage Coming soon....</section>;
 }
 
 export default ServicesPage;

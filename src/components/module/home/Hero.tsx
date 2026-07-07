@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Hero() {
-    return (
-        <section className="text-black bg-white">
-
-            Hero section coming soon...
-        </section>
-    )
+  return (
+    <section className="text-black bg-white">
+      Hero section coming soon...
+    </section>
+  );
 }
 
-export default Hero
+export default Hero;
