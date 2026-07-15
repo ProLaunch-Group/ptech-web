@@ -4,6 +4,11 @@
   /* Light mode tokens: White background, near-black text */
   --background: #ffffff;
   --foreground: #111827;
+
+  --text-deepNavy: #1e3a6e;
+  --text-amberGold: #f5a623;
+  --text-electricBlue: #0a84ff;
+  --text-lightBlue: #e8f3ff;
 }
 
 @theme inline {
@@ -11,6 +16,27 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-sora: var(--font-sora);
+  --font-sans: var(--font-dm-sans);
+
+  --color-card: var(--text-lightBlue);
+  --color-deepNavy: var(--text-deepNavy);
+  --color-lightBlue: var(--text-lightBlue);
+  --color-amberGold: var(--text-amberGold);
+  --color-electricBlue: var(--text-electricBlue);
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(
+        -50%
+      ); /* Move half the combined width to loop seamlessly */
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
