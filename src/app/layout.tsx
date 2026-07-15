@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
-import {  Sora, DM_Sans } from 'next/font/google';
+import { Sora, DM_Sans } from 'next/font/google';
 import './globals.css';
-
-
 
 const sora = Sora({
   subsets: ['latin'],
