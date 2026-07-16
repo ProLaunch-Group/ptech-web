@@ -66,3 +66,5 @@ export const logos = [
     height: 10,
   },
 ];
+
+export const navbarLinks = ['Home', 'About', 'Services', 'Contact'];
