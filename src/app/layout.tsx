@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Sora, DM_Sans } from 'next/font/google';
 import './globals.css';
-import Nav from '@/components/module/home/Nav';
+import Nav from '@/components/layout/Nav';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description:
     'A cloud computing and technology solutions company delivering DevOps, infrastructure management, custom software, and cloud migration services ',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/Prolaunch-logo.svg',
   },
 };
 

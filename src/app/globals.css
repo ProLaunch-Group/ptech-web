@@ -19,6 +19,8 @@
   --font-sora: var(--font-sora);
   --font-sans: var(--font-dm-sans);
 
+  --bg-card: var(--text-lightBlue);
+
   --color-card: var(--text-lightBlue);
   --color-deepNavy: var(--text-deepNavy);
   --color-lightBlue: var(--text-lightBlue);
@@ -32,9 +34,7 @@
       transform: translateX(0%);
     }
     to {
-      transform: translateX(
-        -50%
-      ); /* Move half the combined width to loop seamlessly */
+      transform: translateX(-50%);
     }
   }
 }

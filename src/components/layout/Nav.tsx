@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { navbarLinks } from '@/constants/contanst';
+import { navbarLinks } from '@/constants/constants';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

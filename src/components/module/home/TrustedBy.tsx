@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import { logos } from '@/constants/contanst';
+import { logos } from '@/constants/constants';
 
 export default function TrustedBy() {
   return (
-    <section className="bg-bg-dark border-y border-white/5 py-10 overflow-hidden">
+    <section className="border-y border-white/5 py-8 md:py-12 md:mt-4 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
-        <h2 className="font-display  font-semibold text-xs md:text-sm tracking-[0.15em] uppercase text-center md:text-left">
+        <h2 className="font-sora  font-semibold text-xs md:text-sm tracking-[0.15em] uppercase text-center md:text-left">
           Trusted by Innovative Companies
         </h2>
       </div>
 
-      <div className="relative flex w-full overflow-x-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_15%,black_85%,transparent_100%)]">
+      <div className="relative flex w-full overflow-x-hidden mask-[linear-gradient(to_right,transparent_0%,black_15%,black_85%,transparent_100%)]">
         {/* The Scrolling Track */}
         <div className="flex gap-16 animate-marquee whitespace-nowrap min-w-full shrink-0 items-center justify-around">
           {/* Track 1: Original */}

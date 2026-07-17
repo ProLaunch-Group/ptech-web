@@ -1,4 +1,4 @@
-import { metrics, services } from '@/constants/contanst';
+import { metrics, services } from '@/constants/constants';
 
 export default function HeroCard() {
   return (
@@ -7,15 +7,15 @@ export default function HeroCard() {
 
       {/* Header Info */}
       <header className="flex items-center justify-between mb-5">
-        <div className="font-dm-sans">
-          <p className="text-[#94A3B8] text-xs font-medium uppercase tracking-wider mb-1">
+        <div>
+          <p className="text-[#94A3B8] text-xs font-sans font-medium uppercase tracking-wider mb-1">
             Infrastructure Health
           </p>
-          <p className="text-white font-bold text-xl">
+          <p className="text-white font-sans font-bold text-xl">
             All Systems Operational
           </p>
         </div>
-        <span className="flex items-center gap-1.5 bg-[#10B981]/10 text-[#10B981] px-3 py-1.5 rounded-full text-xs font-semibold">
+        <span className="flex items-center gap-1.5 bg-[#10B981]/10 text-[#10B981] px-3 py-1.5 rounded-full text-xs font-semibold font-sans">
           <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
           99.98% Uptime
         </span>
@@ -34,7 +34,7 @@ export default function HeroCard() {
             <p className="text-[#000000]  font-bold text-lg leading-none mt-1">
               {m.value}
             </p>
-            <p className="text-[#000000] font-dm-sans font-semibold text-[10px] mt-1">
+            <p className="text-[#000000] font-sans font-semibold text-[10px] mt-1">
               {m.label}
             </p>
           </li>
@@ -43,7 +43,7 @@ export default function HeroCard() {
 
       {/* Chart Preview */}
       <div className="mb-5">
-        <p className="text-[#94A3B8] text-xs mb-3">
+        <p className="text-[#94A3B8] text-xs mb-3 font-sans">
           Deployment Activity — Last 7 days
         </p>
         <div className="flex items-end gap-1.5 h-14">
@@ -71,7 +71,9 @@ export default function HeroCard() {
           <li key={i} className="flex items-center gap-3">
             <div className="flex-1">
               <div className="flex items-center justify-between mb-1">
-                <span className="text-[#CBD5E1] text-xs">{s.name}</span>
+                <span className="text-[#CBD5E1] text-xs font-sans">
+                  {s.name}
+                </span>
                 <span className="text-[#94A3B8] text-[10px]">
                   {s.progress}%
                 </span>
