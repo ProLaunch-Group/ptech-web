@@ -1,18 +1,11 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { HOW_WE_HELP_SERVICES } from '@/constants/service';
-import Image from 'next/Image'
+import Image from 'next/Image';
 import { ServiceCardData } from '@/types/service.types';
-import ServiceCardMotion from '@/components/module/home/ServiceCardMotion'
-
-
-
-
-
+import ServiceCardMotion from '@/components/module/home/ServiceCardMotion';
 
 export default function HowWeHelp() {
-
-
   return (
     <section
       className="flex flex-col items-center justify-center py-20 md:py-32 bg-white text-slate-900"
@@ -33,9 +26,8 @@ export default function HowWeHelp() {
           role="list"
           className="flex flex-col gap-8 md:grid md:grid-cols-3 md:gap-8 lg:gap-12 w-full"
         >
-          {
-            HOW_WE_HELP_SERVICES.map((service: ServiceCardData, index: number) => {
-
+          {HOW_WE_HELP_SERVICES.map(
+            (service: ServiceCardData, index: number) => {
               return (
                 <ServiceCardMotion key={service.id} index={index}>
                   <li
@@ -80,8 +72,8 @@ export default function HowWeHelp() {
                   </li>
                 </ServiceCardMotion>
               );
-            })
-          }
+            }
+          )}
         </ul>
       </div>
     </section>
