@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Sora, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/layout/Nav';
+import Footer from '@/components/layout/Footer';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Nav />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
