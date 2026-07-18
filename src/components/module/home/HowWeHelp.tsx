@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { HOW_WE_HELP_SERVICES } from '@/constants/service';
-import Image from 'next/Image';
+import Image from 'next/image';
 import { ServiceCardData } from '@/types/service.types';
 import ServiceCardMotion from '@/components/module/home/ServiceCardMotion';
 
