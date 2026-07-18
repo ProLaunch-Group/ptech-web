@@ -8,7 +8,7 @@ import ServiceCardMotion from '@/components/module/home/ServiceCardMotion';
 export default function HowWeHelp() {
   return (
     <section
-      className="flex flex-col items-center justify-center py-20 md:py-32 bg-white text-slate-900"
+      className="flex flex-col items-center justify-center pt-8 pb-15 md:pt-15 md:pb-18 bg-white text-slate-900"
       aria-labelledby="how-we-help-section"
     >
       <div className="w-full max-w-7xl px-6 md:px-12">
