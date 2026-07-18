@@ -11,3 +11,25 @@ export interface ServiceCardMotionProps {
   children: React.ReactNode;
   index: number;
 }
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
+
+export interface SocialLink {
+  platform: string;
+  href: string;
+  icon: 'in' | 'tw';
+}
+
+export interface ContactInfo {
+  email: string;
+  phone: string;
+  locations: string;
+}
