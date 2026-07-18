@@ -12,7 +12,7 @@ export default function ServiceCardMotion({
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  //Calculate if the screen is mobile or desktop and set the state accordingly
+  // Calculate if the screen is mobile or desktop and set the state accordingly
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -25,8 +25,20 @@ export default function ServiceCardMotion({
     offset: ['start end', 'end start'],
   });
 
-  const scale = useTransform(scrollYProgress, [0.2, 0.9], [0.8, 1.2]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  const isLastCard = index === 2;
+
+  // Keeps your animation timing for cards 1 & 2, but finishes card 3 earlier
+  const scale = useTransform(
+    scrollYProgress,
+    [0.2, isLastCard ? 0.65 : 0.9],
+    [0.8, 1.2]
+  );
+
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, isLastCard ? 0.8 : 0.3],
+    [0, 1]
+  );
 
   return (
     <motion.div
@@ -39,7 +51,7 @@ export default function ServiceCardMotion({
         scale: isMobile ? scale : undefined,
         opacity: isMobile ? opacity : undefined,
       }}
-      className="w-full flex "
+      className="w-full flex"
     >
       {children}
     </motion.div>

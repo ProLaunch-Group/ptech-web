@@ -54,7 +54,9 @@ export default function Footer() {
             />
           </Link>
 
-          <p className="text-sm leading-relaxed max-w-sm">{FOOTER_TAGLINE}</p>
+          <p className="text-sm leading-relaxed max-w-sm lg:-mt-2">
+            {FOOTER_TAGLINE}
+          </p>
 
           {/* Socials */}
           <nav
