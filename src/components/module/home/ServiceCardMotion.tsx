@@ -25,7 +25,6 @@ export default function ServiceCardMotion({
     offset: ['start end', 'end start'],
   });
 
-  
   const isLastCard = index === 2;
 
   // Keeps your animation timing for cards 1 & 2, but finishes card 3 earlier
