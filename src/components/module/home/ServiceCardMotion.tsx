@@ -30,13 +30,13 @@ export default function ServiceCardMotion({
   // Keeps your animation timing for cards 1 & 2, but finishes card 3 earlier
   const scale = useTransform(
     scrollYProgress,
-    [0.2, isLastCard ? 0.65 : 0.9],
+    [0.2, isLastCard ? 0.9 : 0.9],
     [0.8, 1.2]
   );
 
   const opacity = useTransform(
     scrollYProgress,
-    [0, isLastCard ? 0.8 : 0.3],
+    [0, isLastCard ? 0.6 : 0.3],
     [0, 1]
   );
 
@@ -51,7 +51,7 @@ export default function ServiceCardMotion({
         scale: isMobile ? scale : undefined,
         opacity: isMobile ? opacity : undefined,
       }}
-      className="w-full flex"
+      className="w-full flex border border-slate-200 rounded-2xl"
     >
       {children}
     </motion.div>
