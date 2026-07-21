@@ -1,6 +1,6 @@
 import { ChallengeCardProps } from '@/types/service.types';
 
-export default function ChallengeCard({ item, index }: ChallengeCardProps) {
+export default function ChallengeCard({ item }: ChallengeCardProps) {
   return (
     <li className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] p-6 md:p-8 bg-white border border-slate-100 rounded-3xl  hover:shadow-sm hover:shadow-amberGold  transition-shadow duration-300 flex flex-col justify-between">
       <div>
