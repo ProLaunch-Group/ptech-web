@@ -1,7 +1,7 @@
 import { HOW_WE_HELP_SERVICES } from '@/constants/service';
 import { ServiceCardData } from '@/types/service.types';
 import ServiceCardMotion from '@/components/module/home/ServiceCardMotion';
-import HowWeHelpCard from '@/components/layout/HowWeHelpCard';
+import HowWeHelpCard from '@/components/module/home/HowWeHelpCard';
 
 export default function HowWeHelp() {
   return (
@@ -40,7 +40,7 @@ export default function HowWeHelp() {
 
         <ul
           role="list"
-          className="flex flex-col gap-4 md:grid md:grid-cols-3 md:gap-8 lg:gap-6 w-full"
+          className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 lg:gap-6 w-full"
         >
           {HOW_WE_HELP_SERVICES.map(
             (service: ServiceCardData, index: number) => {
