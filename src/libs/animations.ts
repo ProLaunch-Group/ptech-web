@@ -7,8 +7,7 @@ export const getDesktopVariants = (index: number): Variants => {
       visible: {
         x: '0%',
         opacity: 1,
-        rotateY: 15,
-        scale: 0.95,
+        scale: 0.9,
         transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.1 },
       },
     };
@@ -19,8 +18,7 @@ export const getDesktopVariants = (index: number): Variants => {
       visible: {
         x: '0%',
         opacity: 1,
-        rotateY: -15,
-        scale: 0.95,
+        scale: 0.9,
         transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.3 },
       },
     };
@@ -29,11 +27,10 @@ export const getDesktopVariants = (index: number): Variants => {
     return {
       hidden: { x: 0, opacity: 0, rotateY: 0, scale: 0.45 },
       visible: {
-        x: '105%',
+        x: '0%',
         opacity: 1,
-        rotateY: -15,
-        scale: 0.95,
-        transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.3 },
+        scale: 0.9,
+        transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.4 },
       },
     };
   }
@@ -43,7 +40,7 @@ export const getDesktopVariants = (index: number): Variants => {
       x: 0,
       y: 0,
       opacity: 1,
-      scale: 1,
+      scale: 0.9,
       transition: { type: 'spring', stiffness: 90, damping: 12, delay: 0.2 },
     },
   };

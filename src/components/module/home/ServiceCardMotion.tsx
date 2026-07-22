@@ -25,27 +25,17 @@ export default function ServiceCardMotion({
     offset: ['start end', 'end start'],
   });
 
-  const isLastCard = index === 2;
-
   // Keeps your animation timing for cards 1 & 2, but finishes card 3 earlier
-  const scale = useTransform(
-    scrollYProgress,
-    [0.2, isLastCard ? 0.9 : 0.9],
-    [0.8, 1.2]
-  );
+  const scale = useTransform(scrollYProgress, [0.2, 0.3, 0.9], [1.2, 1.1, 0.7]);
 
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, isLastCard ? 0.6 : 0.3],
-    [0, 1]
-  );
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
     <motion.div
       ref={containerRef}
       initial={isMobile ? undefined : 'hidden'}
       whileInView={isMobile ? undefined : 'visible'}
-      viewport={isMobile ? undefined : { once: false, amount: 0.25 }}
+      viewport={isMobile ? undefined : { once: true, amount: 0.25 }}
       variants={isMobile ? undefined : getDesktopVariants(index)}
       style={{
         scale: isMobile ? scale : undefined,

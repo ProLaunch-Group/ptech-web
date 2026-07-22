@@ -31,7 +31,7 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center font-sans gap-2.5 bg-electricBlue text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200 shadow-[0_6px_28px_rgba(46,123,247,0.4)] hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center font-sans gap-2.5 bg-electricBlue text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200  hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0"
             >
               Get a Free Architecture Audit
               <ArrowRight size={16} aria-hidden="true" />

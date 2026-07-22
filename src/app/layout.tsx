@@ -3,6 +3,7 @@ import { Sora, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/layout/Nav';
 import Footer from '@/components/layout/Footer';
+import AiQualifierWidget from '@/components/ui/AiQualifierWidget';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Nav />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <AiQualifierWidget />
       </body>
     </html>
   );
