@@ -97,3 +97,12 @@ export const challengesData: ChallengeCard[] = [
       'Struggling with the risks and downtime associated with moving from on-premise hardware to the cloud.',
   },
 ];
+
+export const reasons = [
+  'Senior engineers on every engagement',
+  'Cloud-native architecture',
+  'AI-ready software solutions',
+  'Transparent communication',
+  'Flexible delivery model',
+  'Long-term support',
+];

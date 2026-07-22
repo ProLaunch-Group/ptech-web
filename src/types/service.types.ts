@@ -1,8 +1,12 @@
+import type { LucideIcon } from 'lucide-react';
+
 export interface ServiceCardData {
   id: string;
   imageUrl: string;
   title: string;
   description: string;
+  outcome: string;
+  features: ServiceFeature[];
   ctaText: string;
   ctaLink: string;
 }
@@ -50,17 +54,12 @@ export interface ServiceFeature {
   iconName?: string;
 }
 
-export interface ServiceCardData {
-  id: string;
-  imageUrl: string;
-  title: string;
-  description: string;
-  outcome: string;
-  features: ServiceFeature[];
-  ctaText: string;
-  ctaLink: string;
-}
-
 export interface HowWeHelpCardProps {
   service: ServiceCardData;
+}
+
+export interface MissionCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
 }
