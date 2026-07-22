@@ -5,10 +5,6 @@ import Script from 'next/script';
 import { X, Bot } from 'lucide-react';
 import FormSkeleton from './FormSkeleton';
 
-
-
-
-
 export default function AiQualifierWidget() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [loadWidgetButton, setLoadWidgetButton] = useState<boolean>(false);
@@ -23,19 +19,15 @@ export default function AiQualifierWidget() {
     };
   }
 
-
   const initializeTally = useCallback(() => {
     if (typeof window !== 'undefined') {
       const tallyWin = window as unknown as TallyWindow;
       tallyWin.Tally?.loadEmbeds();
     }
-  }, [])
-
-
+  }, []);
 
   // Re-initialize Tally whenever the user clicks to open the modal
   useEffect(() => {
-
     if (isOpen) {
       const timer = setTimeout(() => {
         initializeTally();
@@ -44,7 +36,6 @@ export default function AiQualifierWidget() {
       return () => clearTimeout(timer);
     }
   }, [isOpen, initializeTally]);
-
 
   // Helper function: Fires the sound AND the visual scale/bounce animation simultaneously
   const triggerAttentionChime = () => {
@@ -64,7 +55,7 @@ export default function AiQualifierWidget() {
       triggerAttentionChime().catch(() => {
         // Fallback: If blocked, listen for the user's first interaction
         const playOnFirstInteraction = () => {
-          triggerAttentionChime().catch(() => { });
+          triggerAttentionChime().catch(() => {});
 
           // Clean up listeners so it only triggers ONCE
           window.removeEventListener('pointerdown', playOnFirstInteraction);
@@ -156,10 +147,11 @@ export default function AiQualifierWidget() {
         {loadWidgetButton && (
           <button
             onClick={() => handleClick()}
-            className={`pointer-events-auto flex items-center gap-2.5 px-5 py-3.5 bg-[#1e3a6e] hover:bg-[#f5a623] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border border-[#f5a623]/30 ${isRinging
-              ? 'scale-110 -translate-y-2 ring-4 ring-[#f5a623]/50 ring-offset-2 shadow-[#f5a623]/20'
-              : 'scale-100 translate-y-0'
-              }`}
+            className={`pointer-events-auto flex items-center gap-2.5 px-5 py-3.5 bg-[#1e3a6e] hover:bg-[#f5a623] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border border-[#f5a623]/30 ${
+              isRinging
+                ? 'scale-110 -translate-y-2 ring-4 ring-[#f5a623]/50 ring-offset-2 shadow-[#f5a623]/20'
+                : 'scale-100 translate-y-0'
+            }`}
             aria-label={isOpen ? 'Close AI Qualifier' : 'Open AI Qualifier'}
           >
             <Bot
