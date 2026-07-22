@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -42,7 +42,7 @@ const Navbar = () => {
                 {navbarLinks.map((link) => (
                   <li key={link}>
                     <Link
-                      href={`/${link.toLowerCase()}`}
+                      href={`/${link === 'Home' ? '' : link.toLowerCase()}`}
                       className="text-[#ffffff] hover:text-amberGold text-sm font-bold font-sans transition-colors duration-200"
                     >
                       {link}
