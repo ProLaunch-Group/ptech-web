@@ -5,8 +5,8 @@ export default function TrustedBy() {
   return (
     <section className="border-y border-white/5 py-8 md:py-12 md:mt-4 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
-        <h2 className="font-sora  font-semibold text-xs md:text-sm tracking-[0.15em] uppercase text-center md:text-left">
-          Trusted by Innovative Companies
+        <h2 className="font-sora  font-semibold text-xs md:text-sm tracking-wide uppercase text-center md:text-left">
+          Trusted by industry leaders in EdTech, FinTech, HealthTech, and SaaS.
         </h2>
       </div>
 

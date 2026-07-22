@@ -4,34 +4,66 @@ import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
 
 export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
   {
-    id: 'infra-modernization',
+    id: 'cloud-migration-infra',
     imageUrl: '/Home/HowWeHelp-images/infrastructure.png',
-    title: 'Infrastructure Modernization',
+    title: 'Cloud Migration & Infrastructure Modernization',
     description:
-      'Migrate, manage and optimise cloud and on-prem infrastructure for security and savings.',
+      'We handle the full migration to AWS and manage the infrastructure ongoing to improve system performance and eliminate operational complexity.',
+    outcome: 'Lower operational costs and 99.9% uptime.',
+    features: [
+      { label: 'Cloud Migration', iconName: 'cloud' },
+      { label: 'Cloud Management', iconName: 'server' },
+      { label: 'IT Infrastructure Solutions', iconName: 'network' },
+    ],
     ctaText: 'Learn more',
     ctaLink: '/about#infra',
   },
   {
-    id: 'op-velocity',
+    id: 'operational-velocity',
     imageUrl: '/Home/HowWeHelp-images/operational.png',
-    title: 'Operational Velocity',
+    title: 'Operational Velocity (DevOps)',
     description:
-      'Implement DevOps practices and automation that accelerate delivery and reduce downtime.',
+      'Stop the "release cycle anxiety." We automate your deployment pipelines so your team ships features daily, not monthly.',
+    outcome: 'Faster time-to-market with zero deployment risk.',
+    features: [
+      { label: 'DevOps Implementation', iconName: 'git-branch' },
+      { label: 'CI/CD Pipelines', iconName: 'git-pull-request' },
+      { label: 'Infrastructure Automation', iconName: 'cpu' },
+    ],
     ctaText: 'Learn more',
     ctaLink: '/about#devops',
   },
   {
     id: 'product-innovation',
     imageUrl: '/Home/HowWeHelp-images/innovation.png',
-    title: 'Product Innovation',
+    title: 'Product Innovation (Custom Software)',
     description:
-      'Build custom software and digital products that drive growth and create lasting value.',
+      'Stop forcing your process to fit pre-built software. We build bespoke platforms tailored to your unique operational workflow.',
+    outcome: 'Technology that drives your efficiency, not hinders it.',
+    features: [
+      { label: 'Custom Software Development', iconName: 'code' },
+      { label: 'Scalable Web Applications', iconName: 'layout' },
+      { label: 'Enterprise Solutions', iconName: 'building' },
+    ],
     ctaText: 'Learn more',
     ctaLink: '/about#innovation',
   },
+  {
+    id: 'it-infrastructure-solutions',
+    imageUrl: '/Home/HowWeHelp-images/it-solutions.png',
+    title: 'IT Infrastructure Solutions',
+    description:
+      'We design, deploy, and manage the full technology backbone of your organization, from networking to security to monitoring.',
+    outcome: 'Resilient infrastructure. Secure by design.',
+    features: [
+      { label: 'Network Architecture & Design', iconName: 'network' },
+      { label: 'Security & Compliance Guardrails', iconName: 'shield' },
+      { label: '24/7 Monitoring & Incident Response', iconName: 'activity' },
+    ],
+    ctaText: 'Learn more',
+    ctaLink: '/about#it-solutions',
+  },
 ];
-
 export const FOOTER_TAGLINE =
   'Your trusted technology partner for cloud migration, DevOps, custom software, and IT infrastructure that scales with your ambitions.';
 

@@ -19,18 +19,22 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-600  font-sans font-medium text-lg lg:text-xl leading-relaxed mb-10 max-w-xl">
-            Cloud, DevOps, Custom Software, Infrastructure, End-to-end solutions
-            that reduce costs, accelerate delivery and drive real business
-            outcomes.
+            We specialize in secure cloud migration to modernize your legacy
+            infrastructure. Beyond migration, we automate your deployment
+            pipelines and build software that scales your business, allowing you
+            to stop managing servers and focus on growth
           </p>
 
-          <nav className="flex flex-wrap gap-4" aria-label="Hero Actions ">
+          <nav
+            className="flex flex-wrap gap-4 lg:-mt-6"
+            aria-label="Hero Actions "
+          >
             <Link
               href="/contact"
               className="inline-flex items-center font-sans gap-2.5 bg-electricBlue text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200 shadow-[0_6px_28px_rgba(46,123,247,0.4)] hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0"
             >
               Get a Free Architecture Audit
-              <ArrowRight size={16} />
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
             <Link
               href="/services"
