@@ -16,8 +16,8 @@ export default function WhyChooseUsSection() {
 
           <p className="mt-6 leading-8 text-slate-600 font-sans">
             Organizations stay with ProLaunch because we combine the reliability
-            they expect from a large firm with the accountability and speed of
-            a partner that truly cares.
+            they expect from a large firm with the accountability and speed of a
+            partner that truly cares.
           </p>
         </header>
 
@@ -30,7 +30,9 @@ export default function WhyChooseUsSection() {
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
                 <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
               </span>
-              <span className="text-sm font-medium leading-relaxed text-navy">{item}</span>
+              <span className="text-sm font-medium leading-relaxed text-navy">
+                {item}
+              </span>
             </li>
           ))}
         </ul>
