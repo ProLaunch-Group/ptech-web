@@ -3,7 +3,6 @@
 import { metrics, services } from '@/constants/constants';
 import { motion } from 'framer-motion';
 
-
 export default function HeroCard() {
   return (
     <motion.article
@@ -12,7 +11,7 @@ export default function HeroCard() {
       transition={{ delay: 0.4, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="bg-[#000000] rounded-2xl  p-6 shadow-[0_24px_80px_rgba(0,0,0,0.5)] relative overflow-hidden"
     >
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2E7BF7]/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#2E7BF7]/40 to-transparent" />
 
       {/* Header Info */}
       <header className="flex items-center justify-between mb-5">
