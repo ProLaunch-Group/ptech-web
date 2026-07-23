@@ -9,7 +9,10 @@ export default function PrinciplesSection() {
             Core Values
           </p>
 
-          <h2 id="principles-heading" className="mt-6 text-4xl font-bold text-slate-900 font-sora">
+          <h2
+            id="principles-heading"
+            className="mt-6 text-4xl font-bold text-slate-900 font-sora"
+          >
             What we stand for.
           </h2>
 
@@ -19,7 +22,10 @@ export default function PrinciplesSection() {
           </p> */}
         </header>
 
-        <ul className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3" role="list">
+        <ul
+          className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          role="list"
+        >
           {principles.map((item) => (
             <li key={item.title} className="list-none">
               <article className="h-full rounded-2xl border border-slate-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
