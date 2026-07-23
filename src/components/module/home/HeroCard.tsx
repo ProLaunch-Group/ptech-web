@@ -1,9 +1,17 @@
+'use client';
+
 import { metrics, services } from '@/constants/constants';
+import { motion } from 'framer-motion';
 
 export default function HeroCard() {
   return (
-    <article className="bg-[#000000] rounded-2xl  p-6 shadow-[0_24px_80px_rgba(0,0,0,0.5)] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2E7BF7]/40 to-transparent" />
+    <motion.article
+      initial={{ opacity: 0, x: 40, scale: 0.96 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      transition={{ delay: 0.4, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="bg-[#000000] rounded-2xl  p-6 shadow-[0_24px_80px_rgba(0,0,0,0.5)] relative overflow-hidden"
+    >
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#2E7BF7]/40 to-transparent" />
 
       {/* Header Info */}
       <header className="flex items-center justify-between mb-5">
@@ -48,8 +56,11 @@ export default function HeroCard() {
         </p>
         <div className="flex items-end gap-1.5 h-14">
           {[40, 65, 48, 80, 55, 92, 70].map((h, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ delay: 0.8 + i * 0.08, duration: 0.4 }}
               style={{
                 height: `${h}%`,
                 transformOrigin: 'bottom',
@@ -79,8 +90,15 @@ export default function HeroCard() {
                 </span>
               </div>
               <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                <div
+                <motion.div
                   className="h-full rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${s.progress}%` }}
+                  transition={{
+                    delay: 1.0 + i * 0.15,
+                    duration: 0.8,
+                    ease: 'easeOut',
+                  }}
                   style={{
                     width: `${s.progress}%`,
                     background:
@@ -105,6 +123,6 @@ export default function HeroCard() {
           </li>
         ))}
       </ul>
-    </article>
+    </motion.article>
   );
 }

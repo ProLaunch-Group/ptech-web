@@ -11,6 +11,7 @@ import {
   Building,
   ShieldCheck,
   Activity,
+  ServerCog,
 } from 'lucide-react';
 
 interface ServiceIconProps {
@@ -45,6 +46,8 @@ export default function ServiceIcon({
       return <ShieldCheck className={className} />;
     case 'activity':
       return <Activity className={className} />;
+    case 'Servers':
+      return <ServerCog className="w-8 h-8 text-amberGold" />;
     default:
       return <Cloud className={className} />;
   }
