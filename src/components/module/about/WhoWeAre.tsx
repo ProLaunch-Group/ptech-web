@@ -2,13 +2,10 @@ import Image from 'next/image';
 
 import MissionCards from '@/components/module/about/MissionCards';
 
-
-
 export default function WhoWeAre() {
   return (
     <section className="py-28" aria-labelledby="story-heading">
       <header className="mx-auto max-w-7xl px-6">
-      
         <div className="grid items-center gap-20 lg:grid-cols-2">
           <article>
             <header>
@@ -16,7 +13,10 @@ export default function WhoWeAre() {
                 Who We Are
               </p>
 
-              <h2 id="story-heading" className="mt-5 text-4xl font-extrabold text-slate-900 font-sora">
+              <h2
+                id="story-heading"
+                className="mt-5 text-4xl font-extrabold text-slate-900 font-sora"
+              >
                 Engineering trust into every layer of your business
               </h2>
             </header>
@@ -44,11 +44,8 @@ export default function WhoWeAre() {
             />
           </figure>
         </div>
-        
-      
       </header>
       <MissionCards />
     </section>
-
   );
 }
