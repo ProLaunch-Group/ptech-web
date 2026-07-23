@@ -2,7 +2,7 @@
 
 import { metrics, services } from '@/constants/constants';
 import { motion } from 'framer-motion';
-import { Shield } from 'lucide-react';
+
 
 export default function HeroCard() {
   return (
