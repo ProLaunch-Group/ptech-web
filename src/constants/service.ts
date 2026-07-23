@@ -1,8 +1,16 @@
 import { MissionCardProps, ServiceCardData } from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
-import { Compass, HandshakeIcon, ShieldCheck, Lightbulb, Target, Users, Heart, Gem } from 'lucide-react';
-  
+import {
+  Compass,
+  HandshakeIcon,
+  ShieldCheck,
+  Lightbulb,
+  Target,
+  Users,
+  Heart,
+  Gem,
+} from 'lucide-react';
 
 export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
   {
@@ -106,8 +114,6 @@ export const FOOTER_CERTIFICATIONS: string[] = [
   'would be updated',
 ];
 
-
-
 // Mission cards for WHo We Are section for the About page
 export const cards: MissionCardProps[] = [
   {
@@ -169,25 +175,32 @@ export const principles = [
   },
 ];
 
- export const team = [
+export const team = [
   {
-    name: "Sarah Reed",
-    role: "CEO",
-    image: "/About/TeamSection-image/leader-1.png",
+    name: 'Sarah Reed',
+    role: 'CEO',
+    image: '/About/TeamSection-image/leader-1.png',
   },
   {
-    name: "David Kim",
-    role: "Lead Engineer",
-    image: "/About/TeamSection-image/leader-2.png",
+    name: 'David Kim',
+    role: 'Lead Engineer',
+    image: '/About/TeamSection-image/leader-2.png',
   },
   {
-    name: "Alex Morgan",
-    role: "Software Engineer",
-    image: "/About/TeamSection-image/leader-3.png",
+    name: 'Alex Morgan',
+    role: 'Software Engineer',
+    image: '/About/TeamSection-image/leader-3.png',
   },
   {
-    name: "Olivia Lee",
-    role: "Product Manager",
-    image: "/About/TeamSection-image/leader-4.png",
+    name: 'Olivia Lee',
+    role: 'Product Manager',
+    image: '/About/TeamSection-image/leader-4.png',
   },
+];
+
+export const whyUs = [
+  'Cloud Migration & Management: Moving you from costlly on-premise infrastructure to scalable, secure cloud environments (AWS).',
+  'DevOps Implementation: Building automated CI/CD pipelines so your team ships faster, breaks less, and releases with confidence.',
+  'Custom Software Development: Engineering bespoke applications, internal platforms, and secure APIs tailored to your exact business processes.',
+  'IT Infrastructure Solutions: Designing and managing the full technology backbone of your organization-from networking and study to continuos monitoring.',
 ];
