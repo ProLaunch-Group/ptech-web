@@ -5,7 +5,7 @@ const SecondaryCta = () => {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="mb-15 w-full px-4 sm:px-6 lg:px-8"
+      className="mt-15 mb-15 w-full px-4 sm:px-6 lg:px-8"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 rounded-2xl bg-gradient-to-r from-[#0a84ff] to-[#1e3a6e] px-5 py-6 sm:px-6 sm:py-8 lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:py-8">
         <article className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">

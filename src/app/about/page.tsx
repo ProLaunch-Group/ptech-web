@@ -2,9 +2,8 @@ import WhoWeAre from '@/components/module/about/WhoWeAre';
 import AboutUsHero from '@/components/module/about/AboutUsHero';
 import CoreValuesSection from '@/components/module/about/CoreValuesSection';
 import TeamSection from '@/components/module/about/TeamSection';
-
+import OurCapabilities from '@/components/module/about/OurCapabilities';
 import CTASection from './CtaSection';
-
 
 export default function AboutPage() {
   return (
@@ -13,6 +12,7 @@ export default function AboutPage() {
       <WhoWeAre />
       <CoreValuesSection />
       <TeamSection />
+      <OurCapabilities />
       <CTASection />
     </section>
   );
