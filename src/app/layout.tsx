@@ -3,6 +3,8 @@ import { Sora, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/layout/Nav';
 import Footer from '@/components/layout/Footer';
+import AiQualifierWidget from '@/components/ui/AiQualifierWidget';
+import PageTransition from '@/components/ui/PageTransition';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -40,10 +42,13 @@ export default function RootLayout({
       lang="en"
       className={`${sora.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col ">
         <Nav />
-        <main>{children}</main>
+        <PageTransition>
+          <main className="min-h-screen">{children}</main>
+        </PageTransition>
         <Footer />
+        <AiQualifierWidget />
       </body>
     </html>
   );

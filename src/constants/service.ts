@@ -1,37 +1,79 @@
-import { ServiceCardData } from '@/types/service.types';
+import { MissionCardProps, ServiceCardData } from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
+import {
+  Compass,
+  HandshakeIcon,
+  ShieldCheck,
+  Lightbulb,
+  Target,
+  Users,
+  Heart,
+  Gem,
+} from 'lucide-react';
 
 export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
   {
-    id: 'infra-modernization',
+    id: 'cloud-migration-infra',
     imageUrl: '/Home/HowWeHelp-images/infrastructure.png',
-    title: 'Infrastructure Modernization',
+    title: 'Cloud Migration & Infrastructure Modernization',
     description:
-      'Migrate, manage and optimise cloud and on-prem infrastructure for security and savings.',
+      'We handle the full migration to AWS and manage the infrastructure ongoing to improve system performance and eliminate operational complexity.',
+    outcome: 'Lower operational costs and 99.9% uptime.',
+    features: [
+      { label: 'Cloud Migration', iconName: 'cloud' },
+      { label: 'Cloud Management', iconName: 'server' },
+      { label: 'IT Infrastructure Solutions', iconName: 'network' },
+    ],
     ctaText: 'Learn more',
     ctaLink: '/about#infra',
   },
   {
-    id: 'op-velocity',
+    id: 'operational-velocity',
     imageUrl: '/Home/HowWeHelp-images/operational.png',
-    title: 'Operational Velocity',
+    title: 'Operational Velocity (DevOps)',
     description:
-      'Implement DevOps practices and automation that accelerate delivery and reduce downtime.',
+      'Stop the "release cycle anxiety." We automate your deployment pipelines so your team ships features daily, not monthly.',
+    outcome: 'Faster time-to-market with zero deployment risk.',
+    features: [
+      { label: 'DevOps Implementation', iconName: 'git-branch' },
+      { label: 'CI/CD Pipelines', iconName: 'git-pull-request' },
+      { label: 'Infrastructure Automation', iconName: 'cpu' },
+    ],
     ctaText: 'Learn more',
     ctaLink: '/about#devops',
   },
   {
     id: 'product-innovation',
     imageUrl: '/Home/HowWeHelp-images/innovation.png',
-    title: 'Product Innovation',
+    title: 'Product Innovation (Custom Software)',
     description:
-      'Build custom software and digital products that drive growth and create lasting value.',
+      'Stop forcing your process to fit pre-built software. We build bespoke platforms tailored to your unique operational workflow.',
+    outcome: 'Technology that drives your efficiency, not hinders it.',
+    features: [
+      { label: 'Custom Software Development', iconName: 'code' },
+      { label: 'Scalable Web Applications', iconName: 'layout' },
+      { label: 'Enterprise Solutions', iconName: 'building' },
+    ],
     ctaText: 'Learn more',
     ctaLink: '/about#innovation',
   },
+  {
+    id: 'it-infrastructure-solutions',
+    imageUrl: '',
+    title: 'IT Infrastructure Solutions',
+    description:
+      'We design, deploy, and manage the full technology backbone of your organization, from networking to security to monitoring.',
+    outcome: 'Resilient infrastructure. Secure by design.',
+    features: [
+      { label: 'Network Architecture & Design', iconName: 'network' },
+      { label: 'Security & Compliance Guardrails', iconName: 'shield' },
+      { label: '24/7 Monitoring & Incident Response', iconName: 'activity' },
+    ],
+    ctaText: 'Learn more',
+    ctaLink: '/about#it-solutions',
+  },
 ];
-
 export const FOOTER_TAGLINE =
   'Your trusted technology partner for cloud migration, DevOps, custom software, and IT infrastructure that scales with your ambitions.';
 
@@ -65,9 +107,101 @@ export const FOOTER_COMPANY_LINKS: FooterLink[] = [
 export const FOOTER_RESOURCES: string[] = [
   'Privacy Policy',
   'Terms of Service',
+  'FAQ',
 ];
 
 export const FOOTER_CERTIFICATIONS: string[] = [
   'Would be updated',
   'would be updated',
+];
+
+// Mission cards for WHo We Are section for the About page
+export const cards: MissionCardProps[] = [
+  {
+    icon: Compass,
+    title: 'Our Mission',
+    description:
+      'To deliver enterprise-grade technology solutions that transform how businesses operate, scale, and compete in the digital economy- positioning technology as a growth driver, not a cost center',
+  },
+  {
+    icon: Target,
+    title: 'Our Position (A Partner, Not a Vendor)',
+    description:
+      'We do not believe in transactional relationships. we serrve as an extension of your team, embedding ourselves into your operations to solve complex challenges.',
+  },
+  {
+    icon: HandshakeIcon,
+    title: 'Our Promise',
+    description:
+      'Every solution is built with quality, transparency, innovation and a commitment to long-term success.',
+  },
+];
+
+export const principles = [
+  {
+    icon: ShieldCheck,
+    title: 'Precision',
+    description:
+      'Every solution we engineered to exact requirements. We do not approximate, we execute',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Innovation',
+    description:
+      'We stay ahead of the curve so you never have to. We build for where your business is going.',
+  },
+  {
+    icon: Target,
+    title: 'Partnership',
+    description:
+      'We embed into your operations as a long-term partner. Success is built through real, ongoing collaboration.',
+  },
+  {
+    icon: Users,
+    title: 'Reliability',
+    description:
+      'Our clients sleep well because their systems do not go down on our watch. We build for uptime.',
+  },
+  {
+    icon: Heart,
+    title: 'Results',
+    description:
+      'Every engagement is measured by what changes: your efficiency, your reliability, and your growth.',
+  },
+  {
+    icon: Gem,
+    title: 'Accountability',
+    description:
+      'We own the final outcome. If it does not work for your business. It does not work for us.',
+  },
+];
+
+export const team = [
+  {
+    name: 'Sarah Reed',
+    role: 'CEO',
+    image: '/About/TeamSection-image/leader-1.png',
+  },
+  {
+    name: 'David Kim',
+    role: 'Lead Engineer',
+    image: '/About/TeamSection-image/leader-2.png',
+  },
+  {
+    name: 'Alex Morgan',
+    role: 'Software Engineer',
+    image: '/About/TeamSection-image/leader-3.png',
+  },
+  {
+    name: 'Olivia Lee',
+    role: 'Product Manager',
+    image: '/About/TeamSection-image/leader-4.png',
+  },
+];
+
+export const whyUs = [
+  'Cloud Migration & Management: Moving you from costlly on-premise infrastructure to scalable, secure cloud environments (AWS).',
+  'DevOps Implementation: Building automated CI/CD pipelines so your team ships faster, breaks less, and releases with confidence.',
+  'Custom Software Development: Engineering bespoke applications, internal platforms, and secure APIs tailored to your exact business processes.',
+  'IT Infrastructure Solutions: Designing and managing the full technology backbone of your organization-from networking and study to continuos monitoring.',
 ];

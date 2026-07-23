@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ const Navbar = () => {
               aria-label="ProLaunch Technologies Home"
             >
               <Image
-                src="/Navbar-Images/Prolaunch-logo.png"
+                src="/Home/Navbar-Images/Prolaunch-logo.png"
                 alt="ProLaunch Technologies logo"
                 width={48}
                 height={48}
@@ -39,16 +39,20 @@ const Navbar = () => {
               aria-label="Main navigation"
             >
               <ul className="flex items-center gap-8 list-none m-0 p-0">
-                {navbarLinks.map((link) => (
-                  <li key={link}>
-                    <Link
-                      href={`/${link.toLowerCase()}`}
-                      className="text-[#ffffff] hover:text-amberGold text-sm font-bold font-sans transition-colors duration-200"
-                    >
-                      {link}
-                    </Link>
-                  </li>
-                ))}
+                {navbarLinks.map((link) => {
+                  const href = link === 'Home' ? '/' : `/${link.toLowerCase()}`;
+
+                  return (
+                    <li key={link}>
+                      <Link
+                        href={href}
+                        className="text-[#ffffff] hover:text-amberGold text-sm font-bold font-sans transition-colors duration-200"
+                      >
+                        {link}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </section>
 
@@ -77,17 +81,21 @@ const Navbar = () => {
             aria-label="Mobile navigation"
           >
             <ul className="px-6 py-4 flex flex-col gap-4 list-none m-0 p-4">
-              {navbarLinks.map((link) => (
-                <li key={link}>
-                  <Link
-                    href={`/${link.toLowerCase()}`}
-                    className="text-[#ffffff] hover:text-amberGold text-sm font-bold py-1 block"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link}
-                  </Link>
-                </li>
-              ))}
+              {navbarLinks.map((link) => {
+                const href = link === 'Home' ? '/' : `/${link.toLowerCase()}`;
+
+                return (
+                  <li key={link}>
+                    <Link
+                      href={href}
+                      className="text-[#ffffff] hover:text-amberGold text-sm font-bold py-1 block"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         )}

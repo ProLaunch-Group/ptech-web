@@ -1,3 +1,5 @@
+import { ChallengeCard } from '../types/service.types';
+
 export const metrics = [
   { label: 'Cloud Nodes', value: '1,247', change: '+12%' },
   { label: 'Deployments', value: '384', change: '+28%' },
@@ -68,3 +70,39 @@ export const logos = [
 ];
 
 export const navbarLinks = ['Home', 'About', 'Services', 'Contact'];
+
+export const challengesData: ChallengeCard[] = [
+  {
+    audience: 'CTOs',
+    title: 'Cloud bills keep climbing',
+    description:
+      'Struggling with spiraling cloud costs and mounting operational debt.',
+  },
+  {
+    audience: 'Founders',
+    title: 'Product development bottlenecks',
+    description:
+      "Need a rapid development team that understands how to ship products that don't crash.",
+  },
+  {
+    audience: 'Regulated Industries',
+    title: 'Security & compliance gaps',
+    description:
+      'Need iron-clad security and compliance (SOC2/HIPAA) without sacrificing speed.',
+  },
+  {
+    audience: 'Businesses on Legacy Infrastructure',
+    title: 'Legacy infrastructure challenges',
+    description:
+      'Struggling with the risks and downtime associated with moving from on-premise hardware to the cloud.',
+  },
+];
+
+export const reasons = [
+  'Senior engineers on every engagement',
+  'Cloud-native architecture',
+  'AI-ready software solutions',
+  'Transparent communication',
+  'Flexible delivery model',
+  'Long-term support',
+];
