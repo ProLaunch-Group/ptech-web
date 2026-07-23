@@ -18,8 +18,7 @@ const principles = [
   },
   {
     title: 'True Partnership',
-    description:
-      'We work alongside our clients as an extension of their team.',
+    description: 'We work alongside our clients as an extension of their team.',
   },
   {
     title: 'Care for Craft',
@@ -42,17 +41,23 @@ export default function PrinciplesSection() {
             Core Values
           </p>
 
-          <h2 id="principles-heading" className="mt-6 text-4xl font-bold text-slate-900">
+          <h2
+            id="principles-heading"
+            className="mt-6 text-4xl font-bold text-slate-900"
+          >
             The principles behind every engagement
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-slate-600">
-            These values define how we collaborate, innovate and build meaningful
-            relationships with every client.
+            These values define how we collaborate, innovate and build
+            meaningful relationships with every client.
           </p>
         </header>
 
-        <ul className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3" role="list">
+        <ul
+          className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          role="list"
+        >
           {principles.map((item) => (
             <li key={item.title} className="list-none">
               <article className="h-full rounded-2xl border border-slate-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
