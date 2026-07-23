@@ -1,13 +1,22 @@
+'use client';
+
 import Image from 'next/image';
 import { logos } from '@/constants/constants';
+import { motion } from 'framer-motion';
+import { fadeUp } from '@/libs/motion-variants';
+import { whileInViewProps } from '@/libs/motion-variants';
 
 export default function TrustedBy() {
   return (
     <section className="border-y border-white/5 py-8 md:py-12 md:mt-4 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
-        <h2 className="font-sora  font-semibold text-xs md:text-sm tracking-wide uppercase text-center md:text-left">
+        <motion.h2
+          {...whileInViewProps}
+          variants={fadeUp}
+          className="font-sora  font-semibold text-xs md:text-sm tracking-wide uppercase text-center md:text-left"
+        >
           Trusted by industry leaders in EdTech, FinTech, HealthTech, and SaaS.
-        </h2>
+        </motion.h2>
       </div>
 
       <div className="relative flex w-full overflow-x-hidden mask-[linear-gradient(to_right,transparent_0%,black_15%,black_85%,transparent_100%)]">
@@ -25,7 +34,7 @@ export default function TrustedBy() {
                   alt={`${logo.name} logo`}
                   width={logo.width}
                   height={logo.height}
-                  className="opacity-40 hover:opacity-100 transition-opacity duration-200 grayscale hover:grayscale-0 cursor-pointer object-contain"
+                  className="h-auto w-auto opacity-40 hover:opacity-100 transition-opacity duration-200 grayscale hover:grayscale-0 cursor-pointer object-contain"
                 />
               </li>
             ))}
