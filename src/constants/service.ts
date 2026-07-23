@@ -60,7 +60,7 @@ export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
   },
   {
     id: 'it-infrastructure-solutions',
-    imageUrl: '/Home/HowWeHelp-images/it-solutions.png',
+    imageUrl: '',
     title: 'IT Infrastructure Solutions',
     description:
       'We design, deploy, and manage the full technology backbone of your organization, from networking to security to monitoring.',
@@ -107,6 +107,7 @@ export const FOOTER_COMPANY_LINKS: FooterLink[] = [
 export const FOOTER_RESOURCES: string[] = [
   'Privacy Policy',
   'Terms of Service',
+  'FAQ',
 ];
 
 export const FOOTER_CERTIFICATIONS: string[] = [
