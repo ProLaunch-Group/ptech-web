@@ -17,13 +17,17 @@ export default function HowWeHelpCard({ service }: HowWeHelpCardProps) {
             className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-amber-500/20 group-hover:bg-amber-500/30 mb-6 overflow-hidden"
             aria-hidden="true"
           >
-            <Image
-              alt={`${service.title} illustration`}
-              src={service.imageUrl}
-              fill
-              className="object-contain p-2"
-              sizes="48px"
-            />
+            {service.imageUrl ? (
+              <Image
+                alt={`${service.title} illustration`}
+                src={service.imageUrl}
+                fill
+                className="object-contain p-2"
+                sizes="48px"
+              />
+            ) : (
+              <ServiceIcon name="Servers" />
+            )}
           </figure>
           <h3 className="text-xl md:text-2xl font-bold font-sora text-slate-900 tracking-tight mb-4">
             {service.title}
