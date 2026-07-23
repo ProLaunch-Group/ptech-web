@@ -1,17 +1,15 @@
 import WhoWeAre from '@/components/module/about/WhoWeAre';
 import AboutUsHero from '@/components/module/about/AboutUsHero';
 import CoreValuesSection from '@/components/module/about/CoreValuesSection';
-import TeamSection from '@/components/module/about/TeamSection';
 import OurCapabilities from '@/components/module/about/OurCapabilities';
-import CTASection from './CtaSection';
+import CTASection from '@/components/module/about/CtaSection';
 
 export default function AboutPage() {
   return (
-    <section className="bg-white" aria-labelledby="about-page-title">
+    <section aria-labelledby="about-page-page">
       <AboutUsHero />
       <WhoWeAre />
       <CoreValuesSection />
-      <TeamSection />
       <OurCapabilities />
       <CTASection />
     </section>
