@@ -4,6 +4,12 @@ import { useState, useEffect, useCallback } from 'react';
 import Script from 'next/script';
 import { X, Bot } from 'lucide-react';
 import FormSkeleton from './FormSkeleton';
+import { motion } from 'framer-motion';
+import {
+  scaleIn,
+  slideFromLeft,
+  whileInViewProps,
+} from '@/libs/motion-variants';
 
 export default function AiQualifierWidget() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -96,8 +102,13 @@ export default function AiQualifierWidget() {
       {/* Main Floating Widget Container */}
       <section className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
         {/* Widget Expanded Modal Card */}
+
         {isOpen && (
-          <section className="pointer-events-auto mb-4 w-[calc(100vw-3rem)] sm:w-[400px] h-[550px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-bottom-5">
+          <motion.section
+            {...whileInViewProps}
+            variants={slideFromLeft}
+            className="pointer-events-auto mb-4 w-[calc(100vw-3rem)] sm:w-[400px] h-[550px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
+          >
             {/* Widget Card Header */}
             <div className="bg-deepNavy px-5 py-4 flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-2.5">
@@ -140,12 +151,14 @@ export default function AiQualifierWidget() {
                 onLoad={() => setIsFormLoading(false)}
               />
             </div>
-          </section>
+          </motion.section>
         )}
 
         {/* Floating Action Trigger Button (FAB) */}
         {loadWidgetButton && (
-          <button
+          <motion.button
+            variants={scaleIn}
+            {...whileInViewProps}
             onClick={() => handleClick()}
             className={`pointer-events-auto flex items-center gap-1.5 md:gap-2.5 px-2 md:px-5  py-2 md:py-3.5 bg-[#1e3a6e] hover:bg-[#f5a623] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border border-[#f5a623]/30 ${
               isRinging
@@ -160,7 +173,7 @@ export default function AiQualifierWidget() {
             <span className="font-sora font-semibold text-xs md:text-sm tracking-tight">
               {isOpen ? 'Close Qualifier' : 'AI Qualifier'}
             </span>
-          </button>
+          </motion.button>
         )}
       </section>
     </>
