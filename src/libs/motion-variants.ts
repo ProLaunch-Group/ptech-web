@@ -1,10 +1,23 @@
 import { Variants } from 'framer-motion';
 
 //Transistion variant
-export const transistionVariants = {
+export const transistionVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   enter: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -20 },
+};
+
+//For sectionTitle comoponent line
+export const moveLine: Variants = {
+  hidden: {
+    width: 0,
+    opacity: 0,
+  },
+  show: {
+    width: 100,
+    opacity: 1,
+    transition: { duration: 1.6, ease: 'easeOut' },
+  },
 };
 
 // Container variants (for staggering children)
@@ -26,6 +39,15 @@ export const fadeUp: Variants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.7, ease: 'easeOut' },
+  },
+};
+
+export const fadeUp2: Variants = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 2, ease: 'easeOut' },
   },
 };
 
