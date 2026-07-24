@@ -33,7 +33,7 @@ export default function HowWeHelpCard({ service }: HowWeHelpCardProps) {
             {service.title}
           </h3>
 
-          <p className="text-slate-600 font-sans text-sm md:text-base leading-relaxed mb-8">
+          <p className="text-black font-sans text-sm md:text-base leading-relaxed mb-8">
             {service.description}
           </p>
 

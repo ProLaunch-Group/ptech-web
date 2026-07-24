@@ -1,13 +1,15 @@
 import { MissionCardProps } from '@/types/service.types';
 import { cards } from '@/constants/service';
-import { fadeUp } from '@/libs/motion-variants';
+import { fadeUp, fadeUp2, whileInViewProps } from '@/libs/motion-variants';
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
 
 export default function MissionCards() {
   return (
     <StaggerContainer>
-      <section
+      <motion.section
+        variants={fadeUp2}
+        {...whileInViewProps}
         className=" bg-[#e8f3ff] py-24 mt-20"
         aria-labelledby="mission-heading"
       >
@@ -29,7 +31,7 @@ export default function MissionCards() {
                 variants={fadeUp}
                 className="list-none"
               >
-                <article className="h-full rounded-2xl border border-slate-300 bg-white p-8 transition-all duration-200 shadow-sm hover:shadow-[#f5a623] hover:-translate-y-1">
+                <article className="h-full rounded-2xl border-l-4 border-[#f5a623] bg-white p-8 transition-all duration-200 shadow-sm hover:shadow-[#f5a623] hover:-translate-y-1">
                   <card.icon
                     className="mb-5 text-amberGold/50 hover:text-amberGold"
                     size={40}
@@ -47,7 +49,7 @@ export default function MissionCards() {
             ))}
           </ul>
         </div>
-      </section>
+      </motion.section>
     </StaggerContainer>
   );
 }

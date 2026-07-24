@@ -63,3 +63,9 @@ export interface MissionCardProps {
   title: string;
   description: string;
 }
+
+export interface SectionTitleProps {
+  title: string;
+  subtitle?: string;
+  description?: string;
+}
