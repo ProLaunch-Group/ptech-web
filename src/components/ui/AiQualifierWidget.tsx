@@ -100,7 +100,7 @@ export default function AiQualifierWidget() {
       />
 
       {/* Main Floating Widget Container */}
-      <section className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
+      <section className="fixed bottom-20 right-6 z-50 flex flex-col items-end pointer-events-none">
         {/* Widget Expanded Modal Card */}
 
         {isOpen && (
