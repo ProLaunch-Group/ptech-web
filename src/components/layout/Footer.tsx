@@ -46,7 +46,7 @@ export default function Footer() {
             className="w-fit block"
           >
             <Image
-              src="/prolaunch-logo.svg"
+              src="/prolaunch-logo2.png"
               alt="ProLaunch Technologies Logo"
               width={80}
               height={50}
