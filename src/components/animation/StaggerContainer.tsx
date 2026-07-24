@@ -1,9 +1,7 @@
 'use client';
 
 import { motion, HTMLMotionProps } from 'framer-motion';
-import {
-  staggerContainerVariant,
-} from '@/libs/motion-variants';
+import { staggerContainerVariant } from '@/libs/motion-variants';
 
 interface StaggerContainerProps extends HTMLMotionProps<'div'> {
   animateOnMount?: boolean;
