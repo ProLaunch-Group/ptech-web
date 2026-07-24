@@ -42,7 +42,7 @@ export default function Footer() {
         <section className="flex flex-col gap-5">
           <Link
             href="/"
-            aria-label="ProLaunch Technologies Home"
+            aria-label="ProLaunch Technologies footer"
             className="w-fit block"
           >
             <Image
