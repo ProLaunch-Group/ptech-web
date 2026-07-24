@@ -4,9 +4,14 @@ import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { navbarLinks } from '@/constants/constants';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const pathName = usePathname();
+
+  console.log(pathName);
 
   return (
     <nav className="w-full  bg-deepNavy backdrop-blur-md  shadow-[0_10px_30px_rgba(2,12,24,0.35)] ">
@@ -20,7 +25,7 @@ const Navbar = () => {
               aria-label="ProLaunch Technologies Home"
             >
               <Image
-                src="/Home/Navbar-Images/Prolaunch-logo.png"
+                src="/prolaunch-logo2.png"
                 alt="ProLaunch Technologies logo"
                 width={48}
                 height={48}
@@ -41,12 +46,13 @@ const Navbar = () => {
               <ul className="flex items-center gap-8 list-none m-0 p-0">
                 {navbarLinks.map((link) => {
                   const href = link === 'Home' ? '/' : `/${link.toLowerCase()}`;
+                  const isActive = pathName === href;
 
                   return (
                     <li key={link}>
                       <Link
                         href={href}
-                        className="text-[#ffffff] hover:text-amberGold text-sm font-bold font-sans transition-colors duration-200"
+                        className={`hover:text-amberGold text-sm font-bold font-sora transition-colors duration-200 ${isActive ? 'text-[#f5a623]' : 'text-[#ffffff] '}`}
                       >
                         {link}
                       </Link>
@@ -83,12 +89,13 @@ const Navbar = () => {
             <ul className="px-6 py-4 flex flex-col gap-4 list-none m-0 p-4">
               {navbarLinks.map((link) => {
                 const href = link === 'Home' ? '/' : `/${link.toLowerCase()}`;
+                const isActive = pathName === href;
 
                 return (
                   <li key={link}>
                     <Link
                       href={href}
-                      className="text-[#ffffff] hover:text-amberGold text-sm font-bold py-1 block"
+                      className={`hover:text-amberGold text-sm font-bold font-sora transition-colors duration-200 ${isActive ? 'text-[#f5a623]' : 'text-[#ffffff] '}`}
                       onClick={() => setMenuOpen(false)}
                     >
                       {link}

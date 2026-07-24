@@ -1,47 +1,25 @@
 import { Variants } from 'framer-motion';
 
 export const getDesktopVariants = (index: number): Variants => {
-  if (index === 0) {
-    return {
-      hidden: { x: 0, opacity: 0, rotateY: 0, scale: 0.45 },
-      visible: {
-        x: '0%',
-        opacity: 1,
-        scale: 0.9,
-        transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.4 },
-      },
-    };
-  }
-  if (index === 2) {
-    return {
-      hidden: { x: 0, opacity: 0, rotateY: 0, scale: 0.45 },
-      visible: {
-        x: '0%',
-        opacity: 1,
-        scale: 0.9,
-        transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.6 },
-      },
-    };
-  }
-  if (index === 3) {
-    return {
-      hidden: { x: 0, opacity: 0, rotateY: 0, scale: 0.45 },
-      visible: {
-        x: '0%',
-        opacity: 1,
-        scale: 0.9,
-        transition: { type: 'spring', stiffness: 80, damping: 15, delay: 0.7 },
-      },
-    };
-  }
+  // Base delay starting at 0.4s + 0.1s staggering per card index
+  const delay = 0.4 + index * 0.1;
+
   return {
-    hidden: { x: 0, y: 30, opacity: 0, scale: 0.9 },
+    hidden: {
+      opacity: 0,
+      scale: 0.85,
+      y: 20,
+    },
     visible: {
-      x: 0,
-      y: 0,
       opacity: 1,
-      scale: 0.9,
-      transition: { type: 'spring', stiffness: 90, damping: 12, delay: 0.5 },
+      scale: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 80,
+        damping: 15,
+        delay,
+      },
     },
   };
 };

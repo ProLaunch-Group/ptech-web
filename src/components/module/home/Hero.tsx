@@ -10,8 +10,8 @@ import { slideFromLeft } from '@/libs/motion-variants';
 export default function Hero() {
   return (
     <StaggerContainer>
-      <section className=" w-full py-10 md:py-12">
-        <div className="max-w-7xl w-full mx-auto px-6 lg:px-8  grid  lg:grid-cols-2 gap-16 items-center">
+      <section className=" w-full py-10 md:py-12 bg-[#e8f3ff]">
+        <div className="max-w-7xl w-full mx-auto px-6 lg:px-0  lg:mt-15 grid  lg:grid-cols-2 gap-20 items-center ">
           {/* Left Side: Editorial Content */}
           <header className="flex flex-col items-start ">
             <motion.span
@@ -26,8 +26,8 @@ export default function Hero() {
               variants={slideFromLeft}
               className="font-extrabold font-sora text-[36px] lg:text-[48px]  leading-[1.06] tracking-tight text-black mb-4 "
             >
-              We help tech leaders modernize, optimize and scale{' '}
-              <span className="text-deepNavy">with confidence</span>
+              Scale from 0 to 1 million users without{' '}
+              <span className="text-deepNavy">infrastructure downtime.</span>
             </motion.h1>
 
             <motion.p
@@ -47,7 +47,7 @@ export default function Hero() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center font-sans gap-2.5 bg-electricBlue text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200  hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center font-sans gap-2.5 bg-[#0a84ff] text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200  hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0"
               >
                 Get a Free Architecture Audit
                 <ArrowRight size={16} aria-hidden="true" />
