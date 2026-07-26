@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const pathName = usePathname();
 
-  console.log(pathName);
+
 
   return (
     <nav className="w-full  bg-deepNavy backdrop-blur-md  shadow-[0_10px_30px_rgba(2,12,24,0.35)] ">
