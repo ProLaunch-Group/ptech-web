@@ -100,14 +100,14 @@ export default function AiQualifierWidget() {
       />
 
       {/* Main Floating Widget Container */}
-      <section className="fixed bottom-20 right-6 z-50 flex flex-col items-end pointer-events-none">
+      <section className="fixed bottom-15 lg:bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
         {/* Widget Expanded Modal Card */}
 
         {isOpen && (
           <motion.section
             {...whileInViewProps}
             variants={slideFromLeft}
-            className="pointer-events-auto mb-4 w-[calc(100vw-3rem)] sm:w-[400px] h-[550px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
+            className="pointer-events-auto mb-4 w-[calc(100vw-3rem)] sm:w-100 h-137.5 bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
           >
             {/* Widget Card Header */}
             <div className="bg-deepNavy px-5 py-4 flex items-center justify-between border-b border-white/10">
@@ -130,7 +130,7 @@ export default function AiQualifierWidget() {
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
-                className="w-8 h-8 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+                className="w-8 h-8 rounded-full flex items-center justify-center text-slate-300 hover:text-amberGold hover:bg-white/10 transition-colors"
                 aria-label="Close AI Qualifier form"
               >
                 <X className="w-5 h-5" />
