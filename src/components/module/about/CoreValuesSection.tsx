@@ -14,13 +14,9 @@ export default function CoreValueSection() {
         className="py-10 lg:py14"
         aria-labelledby="principles-heading border-2 border-black"
       >
-        <SectionTitle
-          title='Core Values'
-          subtitle='What we stand for.'
-        />
+        <SectionTitle title="Core Values" subtitle="What we stand for." />
 
         <div className="mx-auto max-w-7xl px-6">
-
           <ul
             className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
             role="list"
@@ -50,5 +46,3 @@ export default function CoreValueSection() {
     </StaggerContainer>
   );
 }
-
-
