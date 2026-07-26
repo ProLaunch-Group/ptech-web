@@ -5,17 +5,17 @@ import HeroCard from '@/components/module/home/HeroCard';
 import { ArrowRight, ChevronRight, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
-import { slideFromLeft } from '@/libs/motion-variants';
+import { slideFromLeft, slideFromRight } from '@/libs/motion-variants';
 
 export default function Hero() {
   return (
     <StaggerContainer>
       <section className=" w-full py-10 md:py-12 bg-[#e8f3ff]">
-        <div className="max-w-7xl w-full mx-auto px-6 lg:px-0  lg:mt-15 grid  lg:grid-cols-2 gap-20 items-center ">
+        <div className="max-w-7xl w-full mx-auto px-6 lg:px-2  grid grid-col-1 lg:grid-cols-2 gap-16 items-center ">
           {/* Left Side: Editorial Content */}
           <header className="flex flex-col items-start ">
             <motion.span
-              variants={slideFromLeft}
+              variants={slideFromRight}
               className="inline-flex items-center gap-2 text-deepNavy font-sans text-[14px] font-semibold px-4 py-2 rounded-full mb-4 tracking-wide"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-deepNavy animate-pulse" />
