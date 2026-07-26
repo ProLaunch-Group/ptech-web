@@ -5,6 +5,7 @@ import { principles } from '@/constants/service';
 import { motion } from 'framer-motion';
 
 import { fadeUp } from '@/libs/motion-variants';
+import SectionTitle from '@/components/layout/SectionTitle';
 
 export default function CoreValueSection() {
   return (
@@ -13,23 +14,12 @@ export default function CoreValueSection() {
         className="py-10 lg:py14"
         aria-labelledby="principles-heading border-2 border-black"
       >
-        <div className="mx-auto max-w-7xl px-6">
-          <header className="text-center">
-            <motion.p
-              variants={fadeUp}
-              className="inline-block px-4  mb-2 text-sm font-extrabold tracking-wider text-amberGold uppercase bg- rounded-full font-sans"
-            >
-              Core Values
-            </motion.p>
+        <SectionTitle
+          title='Core Values'
+          subtitle='What we stand for.'
+        />
 
-            <motion.h2
-              variants={fadeUp}
-              id="principles-heading"
-              className="text-3xl lg:text-4xl font-bold text-deepNavy font-sora"
-            >
-              What we stand for.
-            </motion.h2>
-          </header>
+        <div className="mx-auto max-w-7xl px-6">
 
           <ul
             className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
@@ -60,3 +50,5 @@ export default function CoreValueSection() {
     </StaggerContainer>
   );
 }
+
+
