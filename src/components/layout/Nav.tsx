@@ -11,8 +11,6 @@ const Navbar = () => {
 
   const pathName = usePathname();
 
-
-
   return (
     <nav className="w-full  bg-deepNavy backdrop-blur-md  shadow-[0_10px_30px_rgba(2,12,24,0.35)] ">
       <section className="max-w-7xl w-full mx-auto px-6 lg:px-8">
