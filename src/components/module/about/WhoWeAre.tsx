@@ -55,6 +55,7 @@ export default function WhoWeAre() {
                 alt="Our team collaborating on a technology solution"
                 width={700}
                 height={500}
+                loading="eager"
                 className="rounded-3xl object-cover shadow-xl scale-[0.9]"
               />
             </motion.figure>
