@@ -9,7 +9,7 @@ const SectionTitle = ({ title, subtitle, description }: SectionTitleProps) => {
   return (
     <StaggerContainer>
       <section className="flex flex-col gap-3 mb-5 ">
-        <article className="max-w-7xl px-4 sm:px-6 flex flex-col gap-1.5 ml-2 lg:ml-30">
+        <article className="max-w-7xl px-4 sm:px-6 flex flex-col gap-1.5 ml-2 lg:ml-15">
           <motion.div
             variants={moveLine}
             className="w-12 h-1 mb-3 bg-[#f5a623] rounded-full"
