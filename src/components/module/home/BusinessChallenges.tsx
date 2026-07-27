@@ -14,7 +14,6 @@ export default function BusinessChallenges() {
 
         <SectionTitle
           title=" Business challenges we solve"
-          subtitle="IS YOUR TECH HOLDING YOU BACK?"
           description="Your infrastructure wasn't built for your current scale."
         />
 

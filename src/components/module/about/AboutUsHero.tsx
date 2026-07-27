@@ -8,7 +8,7 @@ export default function AboutUsHero() {
   return (
     <StaggerContainer>
       <section
-        className="bg-linear-to-b from-[#e8f3ff] to-[#fffffff] py-10 md:py-14"
+        className="bg-[#1e3a6e] py-10 md:py-14"
         aria-labelledby="about-hero-heading"
       >
         <header className="mx-auto max-w-7xl px-6 lg:pt-2 font-sora ">
@@ -22,7 +22,7 @@ export default function AboutUsHero() {
           <motion.h1
             variants={slideFromLeft}
             id="about-hero-heading"
-            className="max-w-3xl text-4xl lg:text-5xl font-extrabold leading-[1.06] tracking-tight text-deepNavy font-sora"
+            className=" text-4xl lg:text-5xl font-extrabold leading-[1.06] tracking-tight text-white font-sora text-center"
           >
             Most technology vendors hand over a deliverable and disappear, we
             don&apos;t.
@@ -30,7 +30,7 @@ export default function AboutUsHero() {
 
           <motion.p
             variants={slideFromLeft}
-            className="mt-6 max-w-2xl text-base lg:text-lg leading-8 text-slate-600 font-sans font-semibold"
+            className="mt-6  text-base lg:text-lg leading-8 text-slate-300 font-sans font-semibold text-center"
           >
             ProLaunch Technologies is the cloud computing and enterprise
             technology arm of ProLaunch Group. We stay accountable long after

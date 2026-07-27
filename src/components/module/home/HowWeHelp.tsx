@@ -21,6 +21,7 @@ export default function HowWeHelp() {
       deployed. We measure our success by your stability, your reduced
       costs, and your business growth. If your systems aren't
       scaling, we haven't done our job"
+          className='text-deepNavy'
         />
 
         <div className="w-full max-w-7xl px-6 md:px-12">

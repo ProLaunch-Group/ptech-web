@@ -68,4 +68,5 @@ export interface SectionTitleProps {
   title: string;
   subtitle?: string;
   description?: string;
+  className?: string
 }

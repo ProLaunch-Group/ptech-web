@@ -13,7 +13,7 @@ export default function TrustedBy() {
         <motion.h2
           {...whileInViewProps}
           variants={fadeUp}
-          className="font-sora  font-semibold text-xs md:text-sm tracking-wide uppercase text-center md:text-left"
+          className="font-sora  font-semibold text-xs md:text-sm tracking-wide  text-center md:text-left"
         >
           Trusted by industry leaders in EdTech, FinTech, HealthTech, and SaaS.
         </motion.h2>
