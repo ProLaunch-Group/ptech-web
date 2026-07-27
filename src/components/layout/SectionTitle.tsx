@@ -5,7 +5,12 @@ import { StaggerContainer } from '../animation/StaggerContainer';
 import { motion } from 'framer-motion';
 import { fadeUp, moveLine } from '@/libs/motion-variants';
 
-const SectionTitle = ({ title, subtitle, description ,className}: SectionTitleProps) => {
+const SectionTitle = ({
+  title,
+  subtitle,
+  description,
+  className,
+}: SectionTitleProps) => {
   return (
     <StaggerContainer>
       <section className="flex flex-col gap-3 mb-5 ">
