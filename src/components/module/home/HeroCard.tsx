@@ -1,15 +1,17 @@
 'use client';
 
 import { metrics, services } from '@/constants/constants';
+import { whileInViewProps } from '@/libs/motion-variants';
 import { motion } from 'framer-motion';
 
 export default function HeroCard() {
   return (
     <motion.article
-      initial={{ opacity: 0, x: 40, scale: 0.96 }}
-      animate={{ opacity: 1, x: 0, scale: 1 }}
-      transition={{ delay: 0.4, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="bg-[#000000] rounded-2xl  p-6 shadow-[0_24px_80px_rgba(0,0,0,0.5)] relative overflow-hidden"
+      {...whileInViewProps}
+      initial={{ opacity: 0, scale: 0.95, x: 80 }}
+      whileInView={{ opacity: 1, scale: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="bg-[#000000] rounded-2xl p-6 shadow-[0_24px_80px_rgba(0,0,0,0.5)] relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#2E7BF7]/40 to-transparent" />
 
@@ -34,12 +36,12 @@ export default function HeroCard() {
         {metrics.map((m, i) => (
           <li
             key={i}
-            className="bg-card rounded-xl  font-sora p-3.5 border border-white/5 flex flex-col justify-between"
+            className="bg-card rounded-xl font-sora p-3.5 border border-white/5 flex flex-col justify-between"
           >
             <span className="text-[10px] font-semibold text-[#10B981] text-right">
               {m.change}
             </span>
-            <p className="text-[#000000]  font-bold text-lg leading-none mt-1">
+            <p className="text-[#000000] font-bold text-lg leading-none mt-1">
               {m.value}
             </p>
             <p className="text-[#000000] font-sans font-semibold text-[10px] mt-1">
@@ -58,9 +60,10 @@ export default function HeroCard() {
           {[40, 65, 48, 80, 55, 92, 70].map((h, i) => (
             <motion.div
               key={i}
+              {...whileInViewProps}
               initial={{ scaleY: 0 }}
-              animate={{ scaleY: 1 }}
-              transition={{ delay: 0.8 + i * 0.08, duration: 0.4 }}
+              whileInView={{ scaleY: 1 }}
+              transition={{ delay: 0.2 + i * 0.08, duration: 0.4 }}
               style={{
                 height: `${h}%`,
                 transformOrigin: 'bottom',
@@ -92,15 +95,15 @@ export default function HeroCard() {
               <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                 <motion.div
                   className="h-full rounded-full"
+                  {...whileInViewProps}
                   initial={{ width: 0 }}
-                  animate={{ width: `${s.progress}%` }}
+                  whileInView={{ width: `${s.progress}%` }}
                   transition={{
-                    delay: 1.0 + i * 0.15,
+                    delay: 0.4 + i * 0.15,
                     duration: 0.8,
                     ease: 'easeOut',
                   }}
                   style={{
-                    width: `${s.progress}%`,
                     background:
                       s.progress === 100
                         ? 'linear-gradient(90deg, #10B981, #06B6D4)'
