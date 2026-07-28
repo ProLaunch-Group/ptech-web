@@ -14,7 +14,7 @@ export default function AboutUsHero() {
         <header className="mx-auto max-w-7xl px-6 lg:pt-2 font-sora ">
           <motion.p
             variants={slideFromRight}
-            className="inline-block px-4 mb-4 text-sm font-extrabold tracking-wider text-amberGold uppercase bg- rounded-full font-sans"
+            className="inline-block px-4 mb-4 text-sm font-extrabold tracking-wider text-amberGold rounded-full font-sans"
           >
             About Us
           </motion.p>
