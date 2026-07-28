@@ -11,7 +11,7 @@ export default function HowWeHelp() {
   return (
     <StaggerContainer>
       <section
-        className="flex flex-col bg-card items-center justify-center pt-8 pb-15 md:pt-15 md:pb-18 lg:-mt-12 text-slate-900"
+        className="flex flex-col bg-card items-center justify-center pt-8 pb-15 md:pt-15 md:pb-18 lg:-mt-12 px-4 lg:px-4 text-slate-900"
         aria-labelledby="how-we-help-section"
       >
         <SectionTitle
@@ -21,6 +21,7 @@ export default function HowWeHelp() {
       deployed. We measure our success by your stability, your reduced
       costs, and your business growth. If your systems aren't
       scaling, we haven't done our job"
+          variant="secondary"
         />
 
         <div className="w-full max-w-7xl px-6 md:px-12">

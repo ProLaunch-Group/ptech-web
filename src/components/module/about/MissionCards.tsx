@@ -31,17 +31,17 @@ export default function MissionCards() {
                 variants={fadeUp}
                 className="list-none"
               >
-                <article className="h-full rounded-2xl border-l-4 border-[#f5a623] bg-white p-8 transition-all duration-200 shadow-sm hover:shadow-[#f5a623] hover:-translate-y-1">
+                <article className="h-full group rounded-2xl border-l-4 border-[#0a84ff] bg-white p-8 transition-all duration-200 shadow-sm  hover:-translate-y-1">
                   <card.icon
-                    className="mb-5 text-amberGold/50 hover:text-amberGold"
+                    className="mb-5 text-[#0a84ff]/50 group-hover:text-amberGold"
                     size={40}
                   />
 
-                  <h3 className="text-xl font-bold font-sora text-slate-900">
+                  <h3 className="text-xl font-bold font-sora text-deepNavy">
                     {card.title}
                   </h3>
 
-                  <p className="mt-4 leading-7 text-slate-600 font-sans font-semibold">
+                  <p className="mt-4 leading-7 text-slate-600 font-sans font-normal">
                     {card.description}
                   </p>
                 </article>

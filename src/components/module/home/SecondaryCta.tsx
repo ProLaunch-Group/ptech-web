@@ -1,7 +1,12 @@
+'use client';
+
+import { useAIQualifier } from '@/contextApi/AIQualifierContext';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const SecondaryCta = () => {
+  const { openAIQualifier } = useAIQualifier();
+
   return (
     <section
       aria-labelledby="cta-heading"
@@ -38,7 +43,9 @@ const SecondaryCta = () => {
         <aside className="w-full lg:w-auto">
           <button
             type="button"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-semibold text-[#1677F2] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-50 hover:cursor-pointer hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1677F2] focus:ring-offset-2 sm:w-auto sm:px-8 sm:py-5 sm:text-lg"
+            onClick={() => openAIQualifier()}
+            aria-label="Open AI Qualifier widget to request a free architecture audit"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-base font-semibold text-[#1677F2] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-50 hover:text-[#f5a623] hover:cursor-pointer hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1677F2] focus:ring-offset-2 sm:w-auto sm:px-8 sm:py-5 sm:text-lg"
           >
             Start Free Audit
             <ArrowRight className="h-5 w-5 transition-transform duration-300" />

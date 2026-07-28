@@ -8,7 +8,7 @@ export default function HowWeHelpCard({ service }: HowWeHelpCardProps) {
   return (
     <li
       role="listitem"
-      className="flex-1 flex flex-col justify-between p-8 md:p-9 rounded-3xl bg-white  group"
+      className="flex-1 flex flex-col justify-between p-8 md:p-9 rounded-3xl bg-white  group border-l-4 border-[#f5a623]"
     >
       <article className="flex flex-col h-full justify-between">
         {/* Top Header Section */}
