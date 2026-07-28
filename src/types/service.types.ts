@@ -64,8 +64,46 @@ export interface MissionCardProps {
   description: string;
 }
 
+//sectionTitle props
+export type VariantType = 'primary' | 'secondary';
+
 export interface SectionTitleProps {
   title: string;
   subtitle?: string;
   description?: string;
+  variant?: VariantType;
+}
+
+//accordion card types(about/faq)
+export interface AccordionItemProps {
+  title: string;
+  description: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  icon?: React.ReactNode;
+}
+
+//our capabilities-aboutpage
+export interface ServiceCapability {
+  title: string;
+  description: string;
+}
+
+//testimononials
+export interface Testimonial {
+  id: string;
+  quote: string;
+  authorName: string;
+  authorRole: string;
+  avatarUrl: string;
+  companyName: string;
+  companyLogoUrl: string;
+}
+
+//brand statement
+export interface Statement {
+  id: string;
+  tagline: string;
+  headline: string;
+  description: string;
 }

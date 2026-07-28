@@ -1,4 +1,10 @@
-import { MissionCardProps, ServiceCardData } from '@/types/service.types';
+import {
+  MissionCardProps,
+  ServiceCardData,
+  ServiceCapability,
+  Testimonial,
+  Statement,
+} from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
 import {
@@ -15,7 +21,7 @@ import {
 export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
   {
     id: 'cloud-migration-infra',
-    imageUrl: '/Home/HowWeHelp-images/infrastructure.png',
+    imageUrl: '/Home/HowWeHelp-images/operational.png',
     title: 'Cloud Migration & Infrastructure Modernization',
     description:
       'We handle the full migration to AWS and manage the infrastructure ongoing to improve system performance and eliminate operational complexity.',
@@ -30,7 +36,7 @@ export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
   },
   {
     id: 'operational-velocity',
-    imageUrl: '/Home/HowWeHelp-images/operational.png',
+    imageUrl: '/Home/HowWeHelp-images/infrastructure.png',
     title: 'Operational Velocity (DevOps)',
     description:
       'Stop the "release cycle anxiety." We automate your deployment pipelines so your team ships features daily, not monthly.',
@@ -199,9 +205,88 @@ export const team = [
   },
 ];
 
-export const whyUs = [
-  'Cloud Migration & Management: Moving you from costlly on-premise infrastructure to scalable, secure cloud environments (AWS).',
-  'DevOps Implementation: Building automated CI/CD pipelines so your team ships faster, breaks less, and releases with confidence.',
-  'Custom Software Development: Engineering bespoke applications, internal platforms, and secure APIs tailored to your exact business processes.',
-  'IT Infrastructure Solutions: Designing and managing the full technology backbone of your organization-from networking and study to continuos monitoring.',
+export const whyUs: ServiceCapability[] = [
+  {
+    title: 'Cloud Migration & Management',
+    description:
+      'Moving you from costly on-premise infrastructure to scalable, secure cloud environments (AWS).',
+  },
+  {
+    title: 'DevOps Implementation',
+    description:
+      'Building automated CI/CD pipelines so your team ships faster, breaks less, and releases with confidence.',
+  },
+  {
+    title: 'Custom Software Development',
+    description:
+      'Engineering bespoke applications, internal platforms, and secure APIs tailored to your exact business processes.',
+  },
+  {
+    title: 'IT Infrastructure Solutions',
+    description:
+      'Designing and managing the full technology backbone of your organization—from networking and security to continuous monitoring.',
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    quote:
+      "I've used quite a number of enterprise platforms, but ProLaunch is amazing! They're truly interested in your infrastructure stability and constantly tuning your pipelines. Highly recommended!",
+    authorName: 'Steve Harris',
+    authorRole: 'Business Accelerator & Coach',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250',
+    companyName: 'Selar',
+    companyLogoUrl:
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120',
+  },
+  {
+    id: '2',
+    quote:
+      'Migrating our AWS infrastructure with zero downtime seemed impossible until we engaged ProLaunch. Their engineering team owned outcomes, not just deliverables.',
+    authorName: 'Amina Bello',
+    authorRole: 'Head of Product, Fintech Solutions',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250',
+    companyName: 'PayStack',
+    companyLogoUrl:
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120',
+  },
+  {
+    id: '3',
+    quote:
+      'DevOps automation eliminated hours of late-night release bugs. We can ship features twice as fast now without breaking production.',
+    authorName: 'David Chen',
+    authorRole: 'CTO, Global Logistics',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250',
+    companyName: 'LogiTech',
+    companyLogoUrl:
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120',
+  },
+];
+
+export const brandStatements: Statement[] = [
+  {
+    id: '1',
+    tagline: 'OUR CORE DRIVER',
+    headline: 'Engineering Scalable Systems with Zero Compromise',
+    description:
+      'We believe infrastructure should empower growth, not throttle it. Our modern cloud architectures guarantee resilience, security, and peak performance.',
+  },
+  {
+    id: '2',
+    tagline: 'PRECISION & TRUST',
+    headline: 'Transforming Tech Stack Complexity into Competitive Advantage',
+    description:
+      'We own outcomes—not just deliverables. We align legacy systems with cutting-edge cloud-native pipelines so your operations remain uninterrupted.',
+  },
+  {
+    id: '3',
+    tagline: 'FORWARD MOMENTUM',
+    headline: 'Automating the Path from Idea to Enterprise Scale',
+    description:
+      'Eliminate deployment bottlenecks and manual server management. We build automated continuous integration workflows built for high-velocity teams.',
+  },
 ];

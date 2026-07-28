@@ -6,14 +6,20 @@ import { ArrowRight, ChevronRight, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
 import { slideFromLeft, slideFromRight } from '@/libs/motion-variants';
+import { useAIQualifier } from '@/contextApi/AIQualifierContext';
 
 export default function Hero() {
+  const { openAIQualifier } = useAIQualifier();
+
   return (
     <StaggerContainer>
-      <section className=" w-full py-10 md:py-12 bg-[#e8f3ff]">
-        <div className="max-w-7xl w-full mx-auto px-6 lg:px-2  grid grid-col-1 lg:grid-cols-2 gap-16 items-center ">
+      <section
+        aria-labelledby="hero-heading"
+        className="w-full py-10 md:py-12 bg-[#e8f3ff]"
+      >
+        <div className="max-w-7xl w-full mx-auto px-6 md:px-4 lg:px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8  items-center">
           {/* Left Side: Editorial Content */}
-          <header className="flex flex-col items-start ">
+          <header className="flex flex-col items-start">
             <motion.span
               variants={slideFromRight}
               className="inline-flex items-center gap-2 text-deepNavy font-sans text-[14px] font-semibold px-4 py-2 rounded-full mb-4 tracking-wide"
@@ -23,8 +29,9 @@ export default function Hero() {
             </motion.span>
 
             <motion.h1
+              id="hero-heading"
               variants={slideFromLeft}
-              className="font-extrabold font-sora text-[36px] lg:text-[48px]  leading-[1.06] tracking-tight text-black mb-4 "
+              className="font-extrabold font-sora text-3xl  sm:text-[36px] lg:text-[48px] leading-[1.06] tracking-tight text-black mb-4"
             >
               Scale from 0 to 1 million users without{' '}
               <span className="text-deepNavy">infrastructure downtime.</span>
@@ -32,41 +39,47 @@ export default function Hero() {
 
             <motion.p
               variants={slideFromLeft}
-              className="text-gray-600  font-sans font-medium text-lg lg:text-xl leading-relaxed mb-10 max-w-xl"
+              className="text-gray-600 font-sans font-medium text-lg lg:text-xl leading-relaxed mb-10 max-w-xl text-left lg:text-justify"
             >
               We specialize in secure cloud migration to modernize your legacy
               infrastructure. Beyond migration, we automate your deployment
               pipelines and build software that scales your business, allowing
-              you to stop managing servers and focus on growth
+              you to stop managing servers and focus on growth.
             </motion.p>
 
-            <motion.nav
+            {/* Action Group */}
+            <motion.div
               variants={slideFromLeft}
               className="flex flex-wrap gap-4 lg:-mt-6"
-              aria-label="Hero Actions "
             >
-              <Link
-                href="/contact"
-                className="inline-flex items-center font-sans gap-2.5 bg-[#0a84ff] text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200  hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0"
+              {/* Refactored Action Button (Triggers Global AI Qualifier Modal) */}
+              <button
+                type="button"
+                onClick={() => openAIQualifier()}
+                aria-label="Open AI Qualifier widget to request a free architecture audit"
+                className="inline-flex items-center font-sans gap-2.5 bg-[#0a84ff] text-[#F9F8FB] font-semibold px-7 py-3.5 rounded-xl text-[14px] transition-all duration-200 hover:shadow-[0_8px_36px_rgba(46,123,247,0.55)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               >
                 Get a Free Architecture Audit
                 <ArrowRight size={16} aria-hidden="true" />
-              </Link>
+              </button>
+
+              {/* Navigation Link to Services */}
               <Link
                 href="/services"
-                className="inline-flex items-center font-sans font-semibold gap-2.5 bg-white/5 border border-[#0000004D] hover:border-amberGold text-electricBlue px-7 py-3.5 rounded-xl text-[15px] transition-all duration-200 backdrop-blur-sm hover:-translate-y-0.5 hover:text-amberGold  active:translate-y-0"
+                aria-label="Explore our full list of technology services"
+                className="inline-flex items-center font-sans font-semibold gap-2.5 bg-white/5 border border-[#0000004D] hover:border-amberGold text-electricBlue px-7 py-3.5 rounded-xl text-[15px] transition-all duration-200 backdrop-blur-sm hover:-translate-y-0.5 hover:text-amberGold active:translate-y-0"
               >
                 Explore Our Services
-                <ChevronRight size={16} />
+                <ChevronRight size={16} aria-hidden="true" />
               </Link>
-            </motion.nav>
+            </motion.div>
           </header>
 
           {/* Right Side: Visual Dashboard Panel */}
-          <aside className="hidden lg:block relative" aria-hidden="true">
+          <aside className="relative" aria-label="Live System Uptime Metrics">
             <HeroCard />
 
-            {/* Floating Contextual Badges */}
+            {/* Floating Contextual Badge */}
             <motion.span
               animate={{ y: [0, 8, 0] }}
               transition={{
@@ -75,9 +88,9 @@ export default function Hero() {
                 ease: 'easeInOut',
                 delay: 1,
               }}
-              className="absolute -top-4  -right-4 bg-[#000000] rounded-xl px-4 py-2.5 shadow-xl flex items-center gap-2"
+              className="absolute -top-4 -right-4 bg-[#000000] rounded-xl px-4 py-2.5 shadow-xl flex items-center gap-2"
             >
-              <Shield size={14} className="text-[#10B981]" />
+              <Shield size={14} className="text-[#10B981]" aria-hidden="true" />
               <span className="text-white text-xs font-semibold font-sans">
                 40% faster deployment
               </span>

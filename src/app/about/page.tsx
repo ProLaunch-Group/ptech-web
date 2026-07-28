@@ -2,7 +2,7 @@ import WhoWeAre from '@/components/module/about/WhoWeAre';
 import AboutUsHero from '@/components/module/about/AboutUsHero';
 import CoreValuesSection from '@/components/module/about/CoreValuesSection';
 import OurCapabilities from '@/components/module/about/OurCapabilities';
-import CTASection from '@/components/module/about/CtaSection';
+import SecondaryCta from '@/components/module/home/SecondaryCta';
 
 export default function AboutPage() {
   return (
@@ -11,7 +11,7 @@ export default function AboutPage() {
       <WhoWeAre />
       <CoreValuesSection />
       <OurCapabilities />
-      <CTASection />
+      <SecondaryCta />
     </section>
   );
 }
