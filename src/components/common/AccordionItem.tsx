@@ -17,7 +17,7 @@ export function AccordionItem({
       layout
       variants={fadeUp}
       {...whileInViewProps}
-      className="border border-[#1e3a6e] bg-white rounded-2xl sm:rounded-3xl transition-colors overflow-hidden"
+      className="border border-[#1e3a6e] bg-[#1e3a6e]  rounded-2xl sm:rounded-3xl transition-colors overflow-hidden"
     >
       {/* Header Row (Clickable) */}
       <button
@@ -35,7 +35,7 @@ export function AccordionItem({
           )}
 
           {/* Title */}
-          <span className="text-sm sm:text-base font-bold font-sans leading-normal text-slate-800">
+          <span className="text-sm sm:text-base font-bold font-sans leading-normal text-white">
             {title}
           </span>
         </div>
@@ -66,7 +66,7 @@ export function AccordionItem({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <div className="px-5 sm:px-6 pb-5 pt-1 text-sm sm:text-base text-slate-600 font-sans leading-relaxed border-t border-slate-100/80">
+            <div className="px-5 sm:px-6 pb-5 pt-1 text-sm sm:text-base text-white font-sans leading-relaxed border-t border-slate-100/80">
               {description}
             </div>
           </motion.div>
