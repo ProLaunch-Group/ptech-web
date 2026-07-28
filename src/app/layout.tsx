@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 import AiQualifierWidget from '@/components/ui/AiQualifierWidget';
 import PageTransition from '@/components/ui/PageTransition';
 import { AIQualifierProvider } from '@/contextApi/AIQualifierContext';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
