@@ -5,6 +5,7 @@ import MissionCards from '@/components/module/about/MissionCards';
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
 import { fadeUp, slideFromLeft } from '@/libs/motion-variants';
+import SectionTitle from '@/components/layout/SectionTitle';
 
 export default function WhoWeAre() {
   return (
@@ -13,22 +14,11 @@ export default function WhoWeAre() {
         <header className="mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-20 lg:grid-cols-2">
             <article>
-              <header>
-                <motion.p
-                  variants={slideFromLeft}
-                  className="inline-block px-4 py-1.5 mb-4 text-sm font-extrabold tracking-wider text-amberGold uppercase bg- rounded-full font-sans"
-                >
-                  Who We Are
-                </motion.p>
-
-                <motion.h2
-                  variants={slideFromLeft}
-                  id="story-heading"
-                  className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-deepNavy font-sora mb-4"
-                >
-                  Engineering trust into every layer of your business
-                </motion.h2>
-              </header>
+              <SectionTitle
+                title="Who We Are"
+                subtitle="Engineering trust into every layer of your business"
+                variant="secondary"
+              />
 
               <motion.p
                 variants={slideFromLeft}

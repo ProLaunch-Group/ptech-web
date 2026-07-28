@@ -7,20 +7,18 @@ export default function BusinessChallenges() {
   return (
     <StaggerContainer>
       <section
-        className="w-full py-16 md:py-24 bg-[#0a84ff]"
+        className="w-full py-16 md:pt-10 md:pb-22 bg-[#0a84ff]"
         aria-labelledby="challenges-heading"
       >
-        {/* Header / Titles Section */}
-
-        <SectionTitle
-          title=" Business challenges we solve"
-          subtitle="IS YOUR TECH HOLDING YOU BACK?"
-          description="Your infrastructure wasn't built for your current scale."
-        />
-
         {/* Inner Container Max-W-7xl */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          {/*  Card Array Mapping */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex flex-col ">
+          {/* Header / Titles Section */}
+
+          <SectionTitle
+            title=" The challenges"
+            description="Your infrastructure wasn't built for your current scale."
+          />
+
           <ul
             className="w-full grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-8"
             aria-label="Target audiences and their business challenges"
