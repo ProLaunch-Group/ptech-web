@@ -5,7 +5,7 @@ import HeroCard from '@/components/module/home/HeroCard';
 import { ArrowRight, ChevronRight, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
-import { slideFromLeft } from '@/libs/motion-variants';
+import { slideFromLeft, slideFromRight } from '@/libs/motion-variants';
 import { useAIQualifier } from '@/contextApi/AIQualifierContext';
 
 export default function Hero() {
@@ -21,7 +21,7 @@ export default function Hero() {
           {/* Left Side: Editorial Content */}
           <header className="flex flex-col items-start">
             <motion.span
-              variants={slideFromLeft}
+              variants={slideFromRight}
               className="inline-flex items-center gap-2 text-deepNavy font-sans text-[14px] font-semibold px-4 py-2 rounded-full mb-4 tracking-wide"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-deepNavy animate-pulse" />

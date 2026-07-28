@@ -116,7 +116,7 @@ export default function AiQualifierWidget() {
           <motion.section
             {...whileInViewProps}
             variants={slideFromLeft}
-            className="pointer-events-auto mb-4 w-[calc(100vw-3rem)] sm:w-[400px] h-[550px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
+            className="pointer-events-auto mb-4 w-[calc(100vw-3rem)] sm:w-100 h-137.5 bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 animate-in fade-in slide-in-from-bottom-5"
           >
             {/* Widget Card Header */}
             <div className="bg-deepNavy px-5 py-4 flex items-center justify-between border-b border-white/10">

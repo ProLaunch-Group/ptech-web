@@ -13,6 +13,7 @@ export default function CoreValueSection() {
         className="py-10 lg:py-14 "
         aria-labelledby="principles-heading "
       >
+
         <div className="mx-auto max-w-7xl px-6">
           <SectionTitle
             title="Core Values"
