@@ -9,11 +9,11 @@ export default function ChallengeCard({ item }: ChallengeCardProps) {
     <motion.li
       variants={fadeUp2}
       {...whileInViewProps}
-      className="w-full p-6 md:p-8 bg-[#ffffff] border border-slate-100 rounded-3xl  hover:shadow-sm hover:shadow-amberGold  transition-shadow duration-300 flex flex-col justify-between"
+      className="w-full p-6 md:p-8 bg-[#ffffff] border-l-4 border-[#f5a623] rounded-3xl  hover:shadow-sm hover:shadow-amberGold  transition-shadow duration-300 flex flex-col justify-between"
     >
       <div>
         {/*  Badge */}
-        <span className="inline-block px-2.5 py-1 text-xs font-semibold tracking-wide text-slate-600  rounded-md font-sans mb-4 animate-pulse">
+        <span className="inline-block px-2.5 py-1 text-xs font-semibold tracking-wide text-slate-600 bg-amber-100 rounded-md font-sans mb-4 animate-pulse">
           {item.audience}
         </span>
 
