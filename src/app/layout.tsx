@@ -7,7 +7,6 @@ import AiQualifierWidget from '@/components/ui/AiQualifierWidget';
 import PageTransition from '@/components/ui/PageTransition';
 import { AIQualifierProvider } from '@/contextApi/AIQualifierContext';
 import { cn } from '@/libs/utils';
-import Script from 'next/script';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -63,13 +62,6 @@ export default function RootLayout({
           <Footer />
           <AiQualifierWidget />
         </AIQualifierProvider>
-
-        {/* Global Zapier Web Component Script */}
-        <Script
-          src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
-          type="module"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
