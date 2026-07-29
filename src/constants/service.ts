@@ -4,6 +4,7 @@ import {
   ServiceCapability,
   Testimonial,
   Statement,
+  MetricItem,
 } from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
@@ -288,5 +289,24 @@ export const brandStatements: Statement[] = [
     headline: 'Automating the Path from Idea to Enterprise Scale',
     description:
       'Eliminate deployment bottlenecks and manual server management. We build automated continuous integration workflows built for high-velocity teams.',
+  },
+];
+
+export const metrics: MetricItem[] = [
+  {
+    value: '4',
+    title: 'Core Service Lines',
+    description:
+      'Cloud Migrations · DevOps · Custom Software · IT Infrastructure',
+  },
+  {
+    value: '24hr',
+    title: 'Response Guarantee',
+    description: 'Every message is reviewed within one business day',
+  },
+  {
+    value: 'Pan-Africa',
+    title: '& Global Reach',
+    description: 'Serving businesses across Nigeria, Africa, and globally',
   },
 ];
