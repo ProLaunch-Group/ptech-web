@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
-import { slideFromLeft, slideFromRight } from '@/libs/motion-variants';
+import { slideFromLeft } from '@/libs/motion-variants';
 
 export default function AboutUsHero() {
   return (
@@ -12,13 +12,6 @@ export default function AboutUsHero() {
         aria-labelledby="about-hero-heading"
       >
         <header className="mx-auto max-w-7xl px-6 lg:pt-2 font-sora ">
-          <motion.p
-            variants={slideFromRight}
-            className="inline-block px-4 mb-4 text-sm font-extrabold tracking-wider text-amberGold rounded-full font-sans"
-          >
-            About Us
-          </motion.p>
-
           <motion.h1
             variants={slideFromLeft}
             id="about-hero-heading"
