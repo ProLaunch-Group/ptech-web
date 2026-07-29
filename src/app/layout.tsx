@@ -8,7 +8,6 @@ import PageTransition from '@/components/ui/PageTransition';
 import { AIQualifierProvider } from '@/contextApi/AIQualifierContext';
 import { cn } from '@/libs/utils';
 
-
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const sora = Sora({
@@ -54,7 +53,6 @@ export default function RootLayout({
         geist.variable
       )}
     >
-      
       <body className="min-h-full flex flex-col ">
         <Nav />
         <AIQualifierProvider>
