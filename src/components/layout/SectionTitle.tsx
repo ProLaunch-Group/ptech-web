@@ -6,11 +6,12 @@ import { motion } from 'framer-motion';
 import { fadeUp, moveLine } from '@/libs/motion-variants';
 import { cn } from '@/libs/utils';
 
-type VariantType = 'primary' | 'secondary';
+type VariantType = 'primary' | 'secondary' | 'universal';
 
 const variantStyles: Record<VariantType, string> = {
   primary: 'text-white',
   secondary: 'text-deepNavy',
+  universal: 'text-white',
 };
 
 const SectionTitle = ({
@@ -50,13 +51,22 @@ const SectionTitle = ({
             </motion.h3>
           )}
 
-          {description && (
+          {variant === 'universal' ? (
+            <motion.p
+              variants={fadeUp}
+              className="text-base md:text-lg text-white leading-relaxed font-sans"
+            >
+              {description}
+            </motion.p>
+          ) : description ? (
             <motion.p
               variants={fadeUp}
               className="text-base md:text-lg text-gray-700 leading-relaxed font-sans"
             >
               {description}
             </motion.p>
+          ) : (
+            ''
           )}
         </article>
       </section>
