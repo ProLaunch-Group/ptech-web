@@ -5,6 +5,7 @@ import {
   Testimonial,
   Statement,
   MetricItem,
+  ServiceItemProps,
 } from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
@@ -308,5 +309,80 @@ export const metrics: MetricItem[] = [
     value: 'Pan-Africa',
     title: '& Global Reach',
     description: 'Serving businesses across Nigeria, Africa, and globally',
+  },
+];
+
+export const servicesData: ServiceItemProps[] = [
+  {
+    id: 'cloud-migration',
+    number: 'SERVICE 01',
+    title: 'Cloud Migration & Management',
+    descriptions: [
+      'Stop overpaying for rigid, unreliable infrastructure. As a core offering, we transition your business to AWS cloud environments that turn hosting from a cost center into a scalability engine, ensuring your systems grow as fast as your revenue does.',
+      'Our expert management removes the burden of maintenance, delivering superior uptime and predictable cost efficiency so your team can focus on innovation rather than firefighting.',
+    ],
+    gains: [
+      'Lower infrastructure costs',
+      'Improved system reliability and uptime',
+      'Enhanced security and compliance',
+      'Greater scalability and flexibility',
+      'Continuous monitoring and expert support',
+    ],
+    tagline: 'Lower costs. Better uptime. Zero IT firefighting.',
+    ctaText: 'Talk to Us About Cloud Migration',
+  },
+  {
+    id: 'devops-implementation',
+    number: 'SERVICE 02',
+    title: 'DevOps Implementation',
+    descriptions: [
+      'Slow release cycles and deployment failures drain resources and damage client trust. We implement high-velocity DevOps pipelines that automate the path to production, significantly reducing time-to-market for your new features.',
+      'By streamlining your delivery process, we empower your team to ship faster and break less, ensuring every deployment is a predictable, low-risk event.',
+    ],
+    gains: [
+      'Faster software releases',
+      'Reduced deployment failures',
+      'Improved team collaboration',
+      'Increased operational efficiency',
+      'More reliable and predictable systems',
+    ],
+    tagline: 'Ship more. Break less. Release with confidence.',
+    ctaText: 'Talk to Us About DevOps',
+  },
+  {
+    id: 'custom-software',
+    number: 'SERVICE 03',
+    title: 'Custom Software Development',
+    descriptions: [
+      'Off-the-shelf software forces you to compromise your business logic. We build bespoke digital solutions designed to optimize your specific workflows, resulting in immediate gains in operational speed and user productivity.',
+      'Whether automating complex internal tasks or launching a client-facing platform, we deliver a scalable architecture that provides long-term flexibility and a distinct market edge.',
+    ],
+    gains: [
+      'Solutions designed for your exact requirements',
+      'Improved productivity and workflow efficiency',
+      'Better user experiences for your team and clients',
+      'Scalable software architecture built for growth',
+      'Long-term business flexibility',
+    ],
+    tagline: 'Software built for your process. Not the other way around.',
+    ctaText: 'Talk to Us About Custom Software',
+  },
+  {
+    id: 'it-infrastructure',
+    number: 'SERVICE 04',
+    title: 'IT Infrastructure Solutions',
+    descriptions: [
+      'As a foundational core offering, we design and manage the resilient technology backbone that your entire operation depends on. We move you from reactive repairs to proactive stability, ensuring business continuity across your entire digital estate.',
+      'Our comprehensive networking and security management eliminates downtime risks and hardens your security posture, providing the stability required to scale without disruption.',
+    ],
+    gains: [
+      'Improved performance and reliability',
+      'Enhanced security posture',
+      'Reduced downtime and disruption',
+      'Greater operational visibility',
+      'Infrastructure designed and scaled for growth',
+    ],
+    tagline: 'Resilient infrastructure. Secure by design.',
+    ctaText: 'Talk to Us About Infrastructure',
   },
 ];

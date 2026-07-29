@@ -114,3 +114,16 @@ export interface MetricItem {
   title: string;
   description: string;
 }
+
+//Services page(services)
+
+export interface ServiceItemProps {
+  id: string;
+  number: string;
+  title: string;
+  descriptions: string[];
+  gains: string[];
+  tagline: string;
+  ctaText: string;
+  isEven?: boolean;
+}
