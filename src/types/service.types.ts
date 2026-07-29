@@ -65,7 +65,7 @@ export interface MissionCardProps {
 }
 
 //sectionTitle props
-export type VariantType = 'primary' | 'secondary';
+export type VariantType = 'primary' | 'secondary' | 'universal';
 
 export interface SectionTitleProps {
   title: string;
@@ -105,5 +105,12 @@ export interface Statement {
   id: string;
   tagline: string;
   headline: string;
+  description: string;
+}
+
+//why prolaunch (Contact us)
+export interface MetricItem {
+  value: string;
+  title: string;
   description: string;
 }

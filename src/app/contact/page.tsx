@@ -1,7 +1,15 @@
+import { ContactHero } from '@/components/module/contact/ContactHero';
+import FormSection from '@/components/module/contact/FormSection';
+import { MapSection } from '@/components/module/contact/MapSection';
+import { WhyProLaunchTechnologies } from '@/components/module/contact/WhyProLaunchTechnologies';
+
 function ContactPage() {
   return (
-    <section className="mx-auto  max-w-7xl flex justify-center px-6 py-24">
-      Contact Us Page work in Progress....
+    <section aria-labelledby="Contact-page">
+      <ContactHero />
+      <FormSection />
+      <WhyProLaunchTechnologies />
+      <MapSection />
     </section>
   );
 }
