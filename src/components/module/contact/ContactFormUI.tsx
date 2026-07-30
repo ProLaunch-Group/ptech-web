@@ -8,6 +8,7 @@ import {
 } from '@/libs/validations/contact';
 import { fadeDown, whileInViewProps } from '@/libs/motion-variants';
 import { motion } from 'framer-motion';
+import { toast } from 'sonner';
 
 export function ContactForm() {
   const {
@@ -28,14 +29,49 @@ export function ContactForm() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    try {
-      // Send data to your API route or server action here
-      console.log('Form Submitted Successfully:', data);
+    const payload = {
+      name: data.fullName,
+      email: data.email,
+      companyName: data.companyName,
+      serviceOfInterest: data.ServiceOfInterest,
+      challenge: data.challenge,
+      phone: data.phone,
+    };
 
-      // Reset form after successful submission
+    console.log('Front end payload being sent:', payload);
+
+    try {
+      const response = await fetch('/contact/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      if (result.success) {
+        toast.success('Inquiry Sent Successfully!', {
+          description: "We'll be in touch with you shortly.",
+          className:
+            '!bg-emerald-600 !text-white !border-emerald-700 !flex !flex-col !items-center !justify-center !text-center',
+          descriptionClassName: '!text-emerald-100 !text-center font-sora',
+        });
+      }
       reset();
     } catch (error) {
       console.error('Submission failed:', error);
+      toast.error('Failed to Send Inquiry!', {
+        description: 'Something went wrong. Please try again shortly.',
+        className:
+          '!bg-red-600 !text-white !border-red-700 !flex !flex-col !items-center !justify-center !text-center',
+        descriptionClassName: '!text-red-100 !text-center font-sora',
+      });
     }
   };
 
