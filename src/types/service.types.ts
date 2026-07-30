@@ -29,7 +29,7 @@ export interface FooterSection {
 export interface SocialLink {
   platform: string;
   href: string;
-  icon: 'in' | 'tw';
+  icon: 'Ln' | 'tw' | 'ins' | 'fb';
 }
 
 export interface ContactInfo {
@@ -116,7 +116,6 @@ export interface MetricItem {
 }
 
 //Services page(services)
-
 export interface ServiceItemProps {
   id: string;
   number: string;
@@ -126,4 +125,24 @@ export interface ServiceItemProps {
   tagline: string;
   ctaText: string;
   isEven?: boolean;
+}
+
+//FAQ
+export type FaqCategory =
+  | 'General'
+  | 'Our Services'
+  | 'Security & Compliance'
+  | 'Working With Us'
+  | 'Getting Started';
+
+export interface FaqItem {
+  id: string;
+  category: FaqCategory;
+  question: string;
+  answer: string;
+}
+
+export interface FaqGroup {
+  category: FaqCategory;
+  items: FaqItem[];
 }
