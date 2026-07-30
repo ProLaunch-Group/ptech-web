@@ -82,7 +82,7 @@ export function ContactInfoSidebar() {
               Business Hours
             </h4>
             <p className="text-sm text-slate-700 mt-0.5">
-              Mon – Fri, 8:00 AM – 5:00 PM
+              Mon – Fri, 8:00 AM – 5:00 PM WAT
             </p>
           </div>
         </motion.div>
