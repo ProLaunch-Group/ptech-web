@@ -6,6 +6,7 @@ import {
   Statement,
   MetricItem,
   ServiceItemProps,
+  FaqItem,
 } from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
@@ -86,14 +87,16 @@ export const FOOTER_TAGLINE =
   'Your trusted technology partner for cloud migration, DevOps, custom software, and IT infrastructure that scales with your ambitions.';
 
 export const FOOTER_SOCIALS: SocialLink[] = [
-  { platform: 'LinkedIn', href: 'https://linkedin.com', icon: 'in' },
+  { platform: 'LinkedIn', href: 'https://linkedin.com', icon: 'Ln' },
   { platform: 'X (Twitter)', href: 'https://x.com', icon: 'tw' },
+  { platform: 'Instagram', href: 'https://instagraam.com', icon: 'ins' },
+  { platform: 'Fcaebook', href: 'https://instagraam.com', icon: 'fb' },
 ];
 
 export const FOOTER_CONTACT: ContactInfo = {
-  email: 'sample@prolaunchtech.com',
+  email: 'tech@prolaunchgroup.org',
   phone: '+234 813 225 0986',
-  locations: 'Would be updated',
+  locations: 'Abuja, Nigeria',
 };
 
 // Plain text array for services
@@ -109,13 +112,13 @@ export const FOOTER_COMPANY_LINKS: FooterLink[] = [
   { label: 'About Us', href: '/about' },
   { label: 'Our Services', href: '/services' },
   { label: 'Contact Us', href: '/contact' },
+  { label: 'Faq', href: '/faq' },
 ];
 
 // Plain text array for resources
 export const FOOTER_RESOURCES: string[] = [
   'Privacy Policy',
   'Terms of Service',
-  'FAQ',
 ];
 
 export const FOOTER_CERTIFICATIONS: string[] = [
@@ -384,5 +387,108 @@ export const servicesData: ServiceItemProps[] = [
     ],
     tagline: 'Resilient infrastructure. Secure by design.',
     ctaText: 'Talk to Us About Infrastructure',
+  },
+];
+
+//FAQ
+
+export const faqData: FaqItem[] = [
+  // ---------------------------------------------------------------------------
+  // 1. General
+  // ---------------------------------------------------------------------------
+  {
+    id: 'gen-1',
+    category: 'General',
+    question: 'What does ProLaunch Technologies do?',
+    answer:
+      'ProLaunch Technologies helps businesses modernize their technology — migrating to secure cloud infrastructure, automating deployments, and building custom software — so your systems can scale without downtime or spiraling costs.',
+  },
+  {
+    id: 'gen-2',
+    category: 'General',
+    question: 'Who is ProLaunch Technologies for?',
+    answer:
+      'We work with growing SMEs, modernizing enterprises, and fast-moving startups across Nigeria and Africa. That includes CTOs facing rising cloud costs, founders who need a reliable development team, regulated businesses that need strict security and compliance, and companies still running on legacy, on-premise infrastructure.',
+  },
+
+  // ---------------------------------------------------------------------------
+  // 2. Our Services
+  // ---------------------------------------------------------------------------
+  {
+    id: 'srv-1',
+    category: 'Our Services',
+    question:
+      'What is cloud migration and infrastructure management, and do I need it?',
+    answer:
+      'If your business runs on expensive or unreliable on-premise servers, cloud migration moves your systems onto secure, scalable AWS infrastructure. We handle the full migration and manage it going forward, so you get better uptime, lower costs, and no more IT firefighting.',
+  },
+  {
+    id: 'srv-2',
+    category: 'Our Services',
+    question: 'What is DevOps, and how does it help my business?',
+    answer:
+      'DevOps automates your deployment process. Instead of slow, risky software releases, we build pipelines that let your team ship updates faster and with fewer errors — so releases become routine instead of a source of anxiety.',
+  },
+  {
+    id: 'srv-3',
+    category: 'Our Services',
+    question: 'Can you build custom software for our specific workflow?',
+    answer:
+      'Yes. Rather than forcing your business to adapt to off-the-shelf tools, we design and build software, apps, and internal platforms tailored exactly to how your business operates.',
+  },
+  {
+    id: 'srv-4',
+    category: 'Our Services',
+    question: "What's included in your IT infrastructure solutions?",
+    answer:
+      'We design, deploy, and manage your full technology backbone — networking, security, monitoring, and system reliability — so your infrastructure stays resilient and is secure by design.',
+  },
+
+  // ---------------------------------------------------------------------------
+  // 3. Security & Compliance
+  // ---------------------------------------------------------------------------
+  {
+    id: 'sec-1',
+    category: 'Security & Compliance',
+    question:
+      'Do you support regulated industries with compliance needs like SOC2 or HIPAA?',
+    answer:
+      "Yes. We build infrastructure with compliance requirements like SOC2 and HIPAA in mind, so regulated businesses don't have to trade security for speed.",
+  },
+
+  // ---------------------------------------------------------------------------
+  // 4. Working With Us
+  // ---------------------------------------------------------------------------
+  {
+    id: 'wwu-1',
+    category: 'Working With Us',
+    question: 'How is ProLaunch different from other tech vendors?',
+    answer:
+      'We position ourselves as a long-term engineering partner, not a one-off vendor. Most providers hand over a deliverable and disappear — we stay accountable after go-live and measure our success by your reduced costs, improved stability, and business growth.',
+  },
+  {
+    id: 'wwu-2',
+    category: 'Working With Us',
+    question: 'What results have other clients seen?',
+    answer:
+      'Results vary by project, but our focus in every engagement is the same: lower costs, stronger uptime, and infrastructure that scales with you.',
+  },
+
+  // ---------------------------------------------------------------------------
+  // 5. Getting Started
+  // ---------------------------------------------------------------------------
+  {
+    id: 'gst-1',
+    category: 'Getting Started',
+    question: 'How do I get started?',
+    answer:
+      'Book a Free Architecture Audit (or Discovery Call). This is where we review your current setup, understand your challenges, and map out how we can help.',
+  },
+  {
+    id: 'gst-2',
+    category: 'Getting Started',
+    question: 'How long does a project typically take?',
+    answer:
+      'It depends on the scope — a cloud migration looks different from a custom software build. Your free architecture audit or discovery call is where we scope out a timeline specific to your situation.',
   },
 ];
