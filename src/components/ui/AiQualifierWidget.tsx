@@ -110,11 +110,11 @@ export default function AiQualifierWidget() {
               </button>
             </div>
 
-            {/* 2. Zapier Web Component Body */}
+            {/* Zapier Web Component Body */}
             <div className="flex-1 w-full bg-slate-50 relative overflow-hidden">
               {React.createElement('zapier-interfaces-chatbot-embed', {
                 'is-popup': 'false',
-                'chatbot-id': 'cms56s5yn009n12ux10bo1621',
+                'chatbot-id': 'cms7h5icz004djyt1a0nluv0a',
                 style: { width: '100%', height: '100%' },
               })}
             </div>

@@ -7,6 +7,7 @@ import AiQualifierWidget from '@/components/ui/AiQualifierWidget';
 import PageTransition from '@/components/ui/PageTransition';
 import { AIQualifierProvider } from '@/contextApi/AIQualifierContext';
 import { cn } from '@/libs/utils';
+import { Toaster } from '@/components/ui/sonner';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -57,7 +58,10 @@ export default function RootLayout({
         <Nav />
         <AIQualifierProvider>
           <PageTransition>
-            <main className="min-h-screen">{children}</main>
+            <main className="min-h-screen">
+              {children}
+              <Toaster position="top-center" richColors />
+            </main>
           </PageTransition>
           <Footer />
           <AiQualifierWidget />
