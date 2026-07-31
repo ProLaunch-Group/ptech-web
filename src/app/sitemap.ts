@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tech.prolaunchgroup.org';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://tech.prolaunchgroup.org';
 
   // Define all public static routes
   const routes = ['', '/about', '/services', '/faq', '/contact'];
