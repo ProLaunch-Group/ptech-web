@@ -69,34 +69,37 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://tech.prolaunchgroup.org',
+    url: '/', 
     siteName: 'ProLaunch Technologies',
     title: 'ProLaunch Technologies | Cloud Computing & DevOps Solutions',
     description:
       'Architecting high-performance cloud infrastructure, DevOps pipelines, and enterprise custom software for modern business scale.',
     images: [
       {
-        url: '/Prolaunch-logo.svg',
+        url: '/prolaunch-logo2.png',
+        width: 1200,
+        height: 630,
         alt: 'ProLaunch Technologies Logo',
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image', 
     title: 'ProLaunch Technologies | Cloud & DevOps Solutions',
     description:
       'Accelerating business growth with resilient cloud infrastructure and modern software engineering.',
-    images: ['/Prolaunch-logo.svg'],
+    images: ['/prolaunch-logo2.png'],
     creator: '@prolaunch_tech',
   },
   icons: {
     icon: [
-      { url: '/Prolaunch-logo.svg', type: 'image/svg+xml' },
+      { url: '/prolaunch-logo2.png', type: 'image/png' },
       { url: '/favicon.ico' },
     ],
-    apple: [{ url: '/Prolaunch-logo.svg' }],
+    apple: [{ url: '/prolaunch-logo2.png' }],
   },
 };
+
 
 export default function RootLayout({
   children,
