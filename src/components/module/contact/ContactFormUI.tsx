@@ -62,7 +62,7 @@ export function ContactForm() {
         });
       }
       reset();
-    } catch (error) {
+    } catch {
       toast.error('Failed to Send Inquiry!', {
         description: 'Something went wrong. Please try again shortly.',
         className:
