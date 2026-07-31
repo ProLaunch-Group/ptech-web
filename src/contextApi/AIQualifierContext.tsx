@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useCallback, useContext, useState } from 'react';
 
 interface AIQualifierContextType {
   openWidget: boolean;
@@ -20,7 +20,9 @@ export function AIQualifierProvider({
   const [openWidget, setOpenWidget] = useState<boolean>(false);
 
   const openAIQualifier = () => setOpenWidget(true);
-  const closeAIQualifier = () => setOpenWidget(false);
+  const closeAIQualifier = useCallback(() => {
+    setOpenWidget(false);
+  }, [])
 
   return (
     <AIQualifierContext.Provider
