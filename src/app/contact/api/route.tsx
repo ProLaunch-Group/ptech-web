@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     );
   }
 
-  // Construct JSX outside try/catch so ESLint stays happy
+  
   const template = (
     <ContactEmailTemplate
       name={name}
@@ -50,13 +50,11 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error('Resend Error:', error);
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
     return NextResponse.json({ success: true, id: data?.id }, { status: 200 });
   } catch (err) {
-    console.error('Server Error:', err);
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
