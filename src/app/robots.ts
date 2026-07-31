@@ -1,14 +1,14 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://prolaunch.tech';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tech.prolaunchgroup.org';
 
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/'],
-    },
-    sitemap: `${baseUrl}/sitemap.xml`,
-  };
+    return {
+        rules: {
+            userAgent: '*',
+            allow: '/',
+            disallow: ['/api/'],
+        },
+        sitemap: `${baseUrl}/sitemap.xml`,
+    };
 }
