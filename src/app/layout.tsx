@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: '/', 
+    url: '/',
     siteName: 'ProLaunch Technologies',
     title: 'ProLaunch Technologies | Cloud Computing & DevOps Solutions',
     description:
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary_large_image', 
+    card: 'summary_large_image',
     title: 'ProLaunch Technologies | Cloud & DevOps Solutions',
     description:
       'Accelerating business growth with resilient cloud infrastructure and modern software engineering.',
@@ -99,7 +99,6 @@ export const metadata: Metadata = {
     apple: [{ url: '/prolaunch-logo2.png' }],
   },
 };
-
 
 export default function RootLayout({
   children,
