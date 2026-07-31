@@ -28,7 +28,7 @@ export function ContactInfoSidebar() {
           </div>
           <div>
             <h4 className="text-sm font-semibold text-deepNavy">Phone</h4>
-            <p className="text-sm text-slate-700 mt-0.5">+234 803 180 5112</p>
+            <p className="text-sm text-slate-700 mt-0.5">+234 815 456 3245</p>
           </div>
         </motion.div>
 

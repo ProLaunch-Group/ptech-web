@@ -108,7 +108,7 @@ export const FOOTER_SOCIALS: SocialLink[] = [
 
 export const FOOTER_CONTACT: ContactInfo = {
   email: 'tech@prolaunchgroup.org',
-  phone: '+234 813 225 0986',
+  phone: '+234 815 456 3245',
   locations: 'Abuja, Nigeria',
 };
 
