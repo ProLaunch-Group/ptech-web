@@ -501,7 +501,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Mary-Queen Uchechukwu',
     role: 'Founder & CEO',
     bio: 'As the Founder of ProLaunch Group and a hands-on Cloud & DevOps Engineer, Mary-Queen bridges the gap between complex infrastructure challenges and clear business strategy. She leads our vision with a commitment to technical precision and a results-led approach, ensuring that technology serves as an accelerator—not a bottleneck—for your business.',
-    image: '/about/TeamSection-image/ceo.jpeg',
+    image: '/About/TeamSection-image/ceo.jpeg',
   },
 ];
 
