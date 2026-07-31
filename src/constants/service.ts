@@ -88,10 +88,22 @@ export const FOOTER_TAGLINE =
   'Your trusted technology partner for cloud migration, DevOps, custom software, and IT infrastructure that scales with your ambitions.';
 
 export const FOOTER_SOCIALS: SocialLink[] = [
-  { platform: 'LinkedIn', href: 'https://linkedin.com', icon: 'Ln' },
-  { platform: 'X (Twitter)', href: 'https://x.com', icon: 'tw' },
-  { platform: 'Instagram', href: 'https://instagraam.com', icon: 'ins' },
-  { platform: 'Fcaebook', href: 'https://instagraam.com', icon: 'fb' },
+  {
+    platform: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/prolaunch-tech/',
+    icon: 'Ln',
+  },
+  { platform: 'X (Twitter)', href: 'https://x.com/ProlaunchTech', icon: 'tw' },
+  {
+    platform: 'Instagram',
+    href: 'https://instagram.com/ProlaunchTech',
+    icon: 'ins',
+  },
+  {
+    platform: 'Facebook',
+    href: 'https://facebook.com/ProlaunchTech',
+    icon: 'fb',
+  },
 ];
 
 export const FOOTER_CONTACT: ContactInfo = {
@@ -238,18 +250,6 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     quote:
-      "I've used quite a number of enterprise platforms, but ProLaunch is amazing! They're truly interested in your infrastructure stability and constantly tuning your pipelines. Highly recommended!",
-    authorName: 'Steve Harris',
-    authorRole: 'Business Accelerator & Coach',
-    avatarUrl:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250',
-    companyName: 'Selar',
-    companyLogoUrl:
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120',
-  },
-  {
-    id: '2',
-    quote:
       'Migrating our AWS infrastructure with zero downtime seemed impossible until we engaged ProLaunch. Their engineering team owned outcomes, not just deliverables.',
     authorName: 'Amina Bello',
     authorRole: 'Head of Product, Fintech Solutions',
@@ -260,7 +260,7 @@ export const testimonials: Testimonial[] = [
       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=120',
   },
   {
-    id: '3',
+    id: '2',
     quote:
       'DevOps automation eliminated hours of late-night release bugs. We can ship features twice as fast now without breaking production.',
     authorName: 'David Chen',
@@ -501,13 +501,19 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Mary-Queen Uchechukwu',
     role: 'Founder & CEO',
     bio: 'As the Founder of ProLaunch Group and a hands-on Cloud & DevOps Engineer, Mary-Queen bridges the gap between complex infrastructure challenges and clear business strategy. She leads our vision with a commitment to technical precision and a results-led approach, ensuring that technology serves as an accelerator—not a bottleneck—for your business.',
-    image: '/images/team/mary-queen.jpg',
+    image: '/about/TeamSection-image/ceo.jpeg',
   },
-  {
+];
+
+/**
+ * 
+ * 
+ * 
+ *  {
     id: 'emmanuel-adenuel',
     name: 'Emmanuel Adenuel',
     role: 'CTO',
     bio: 'As our CTO and a veteran Fullstack Software Developer, Emmanuel leads our technical architecture and software delivery. He ensures every line of code and every infrastructure decision is engineered for performance, reliability, and security, turning ambitious business goals into high-functioning digital reality.',
     image: '/images/team/emmanuel.jpg',
   },
-];
+ */
