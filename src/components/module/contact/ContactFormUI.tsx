@@ -57,12 +57,12 @@ export function ContactForm() {
         toast.success('Inquiry Sent Successfully!', {
           description: "We'll be in touch with you shortly.",
           className:
-            '!bg-emerald-600 !text-white !border-emerald-700 !flex !flex-col !items-center !justify-center !text-center',
+            '!bg-emerald-600 !text-white !border-emerald-700 !flex !flex-col !items-center !justify-center !text-center mt-16',
           descriptionClassName: '!text-emerald-100 !text-center font-sora',
         });
       }
       reset();
-    } catch (error) {
+    } catch {
       toast.error('Failed to Send Inquiry!', {
         description: 'Something went wrong. Please try again shortly.',
         className:

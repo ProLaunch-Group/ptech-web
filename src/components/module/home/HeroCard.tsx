@@ -25,7 +25,7 @@ export default function HeroCard() {
             All Systems Operational
           </p>
         </div>
-        <span className="flex items-center gap-1.5 bg-[#10B981]/10 text-[#10B981] px-3 py-1.5 rounded-full text-xs font-semibold font-sans">
+        <span className="flex justify-center items-center gap-1.5 bg-[#10B981]/10 text-[#10B981] px-3 py-1.5 rounded-full text-xs font-semibold font-sans">
           <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
           99.98% Uptime
         </span>
