@@ -29,7 +29,7 @@ export default function HowWeHelpCard({ service }: HowWeHelpCardProps) {
               <ServiceIcon name="Servers" />
             )}
           </figure>
-          <h3 className="text-xl md:text-2xl font-bold font-sora text-slate-900 tracking-tight mb-4">
+          <h3 className="text-xl md:text-2xl font-bold font-sora text-deepNavy tracking-tight mb-4">
             {service.title}
           </h3>
 

@@ -38,8 +38,6 @@ export function ContactForm() {
       phone: data.phone,
     };
 
-    console.log('Front end payload being sent:', payload);
-
     try {
       const response = await fetch('/contact/api', {
         method: 'POST',
@@ -65,7 +63,6 @@ export function ContactForm() {
       }
       reset();
     } catch (error) {
-      console.error('Submission failed:', error);
       toast.error('Failed to Send Inquiry!', {
         description: 'Something went wrong. Please try again shortly.',
         className:
@@ -186,6 +183,15 @@ export function ContactForm() {
               {...register('companyName')}
               className="w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#0a84ff] transition-all text-sm font-medium"
             />
+            {errors.companyName && (
+              <p
+                id="message-error"
+                className="text-xs text-amberGold font-medium mt-0.5"
+                role="alert"
+              >
+                {errors.companyName.message}
+              </p>
+            )}
           </div>
 
           {/* Phone Number */}
@@ -240,6 +246,15 @@ export function ContactForm() {
             {...register('ServiceOfInterest')}
             className="w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#0a84ff] transition-all text-sm font-medium"
           />
+          {errors.ServiceOfInterest && (
+            <p
+              id="message-error"
+              className="text-xs text-amberGold font-medium mt-0.5"
+              role="alert"
+            >
+              {errors.ServiceOfInterest.message}
+            </p>
+          )}
         </div>
 
         {/*  Message Textarea */}
