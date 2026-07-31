@@ -146,3 +146,17 @@ export interface FaqGroup {
   category: FaqCategory;
   items: FaqItem[];
 }
+
+//Team Section(About us)
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  image: string; // URL or static import
+  socials?: {
+    linkedin?: string;
+    github?: string;
+    twitter?: string;
+  };
+}

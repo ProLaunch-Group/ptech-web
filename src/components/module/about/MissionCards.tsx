@@ -10,7 +10,7 @@ export default function MissionCards() {
       <motion.section
         variants={fadeUp2}
         {...whileInViewProps}
-        className=" bg-[#e8f3ff] py-24 mt-20"
+        className=" bg-[#e8f3ff] py-24 lg:py-16 mt-20"
         aria-labelledby="mission-heading"
       >
         <div className="mx-auto w-full max-w-7xl px-6">

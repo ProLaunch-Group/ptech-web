@@ -8,7 +8,7 @@ import { whileInViewProps } from '@/libs/motion-variants';
 
 export default function TrustedBy() {
   return (
-    <section className="border-y border-white/5 py-8 md:py-12 md:mt-4 overflow-hidden">
+    <section className="border-y border-white/5 py-8 md:pt-12 md:pb-0 md:mt-4 overflow-hidden border-2 border-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
         <motion.h2
           {...whileInViewProps}

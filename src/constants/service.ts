@@ -7,6 +7,7 @@ import {
   MetricItem,
   ServiceItemProps,
   FaqItem,
+  TeamMember,
 } from '@/types/service.types';
 
 import { FooterLink, SocialLink, ContactInfo } from '@/types/service.types';
@@ -136,9 +137,9 @@ export const cards: MissionCardProps[] = [
   },
   {
     icon: Target,
-    title: 'Our Position (A Partner, Not a Vendor)',
+    title: 'Our Position',
     description:
-      'We do not believe in transactional relationships. we serrve as an extension of your team, embedding ourselves into your operations to solve complex challenges.',
+      'We do not believe in transactional relationships. We serve as an extension of your team, embedding ourselves into your operations to solve complex challenges.',
   },
   {
     icon: HandshakeIcon,
@@ -490,5 +491,23 @@ export const faqData: FaqItem[] = [
     question: 'How long does a project typically take?',
     answer:
       'It depends on the scope — a cloud migration looks different from a custom software build. Your free architecture audit or discovery call is where we scope out a timeline specific to your situation.',
+  },
+];
+
+//Team Section(About us)
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: 'mary-queen-uchechukwu',
+    name: 'Mary-Queen Uchechukwu',
+    role: 'Founder & CEO',
+    bio: 'As the Founder of ProLaunch Group and a hands-on Cloud & DevOps Engineer, Mary-Queen bridges the gap between complex infrastructure challenges and clear business strategy. She leads our vision with a commitment to technical precision and a results-led approach, ensuring that technology serves as an accelerator—not a bottleneck—for your business.',
+    image: '/images/team/mary-queen.jpg',
+  },
+  {
+    id: 'emmanuel-adenuel',
+    name: 'Emmanuel Adenuel',
+    role: 'CTO',
+    bio: 'As our CTO and a veteran Fullstack Software Developer, Emmanuel leads our technical architecture and software delivery. He ensures every line of code and every infrastructure decision is engineered for performance, reliability, and security, turning ambitious business goals into high-functioning digital reality.',
+    image: '/images/team/emmanuel.jpg',
   },
 ];

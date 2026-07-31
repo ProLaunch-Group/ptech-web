@@ -19,7 +19,7 @@ export default function ChallengeCard({ item }: ChallengeCardProps) {
 
         {/* Card Title */}
         {item.title && (
-          <h3 className="text-lg md:text-xl font-bold text-slate-900 font-sora mb-2 tracking-tight">
+          <h3 className="text-lg md:text-xl font-bold text-deepNavy font-sora mb-2 tracking-tight">
             {item.title}
           </h3>
         )}
