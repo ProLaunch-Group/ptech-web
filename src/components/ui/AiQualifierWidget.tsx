@@ -31,7 +31,7 @@ export default function AiQualifierWidget() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [openWidget,closeAIQualifier]);
+  }, [openWidget, closeAIQualifier]);
 
   //Helper function: Fires the sound AND the visual scale/bounce animation
   const triggerAttentionChime = () => {

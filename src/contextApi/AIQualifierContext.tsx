@@ -22,7 +22,7 @@ export function AIQualifierProvider({
   const openAIQualifier = () => setOpenWidget(true);
   const closeAIQualifier = useCallback(() => {
     setOpenWidget(false);
-  }, [])
+  }, []);
 
   return (
     <AIQualifierContext.Provider
