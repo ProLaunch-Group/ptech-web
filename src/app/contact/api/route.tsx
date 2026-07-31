@@ -25,7 +25,6 @@ export async function POST(request: Request) {
     );
   }
 
-  
   const template = (
     <ContactEmailTemplate
       name={name}
