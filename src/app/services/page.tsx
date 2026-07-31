@@ -2,11 +2,6 @@ import ServiceHero from '@/components/module/service/ServiceHerro';
 import ServicesSection from '@/components/module/service/ServicesSection';
 import type { Metadata } from 'next';
 
-
-
-
-
-
 export const metadata: Metadata = {
   title: 'Services & Cloud Solutions',
   description:
@@ -21,9 +16,6 @@ export const metadata: Metadata = {
     url: 'https://prolaunch.tech/services',
   },
 };
-
-
-
 
 function ServicesPage() {
   return (

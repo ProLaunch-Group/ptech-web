@@ -6,9 +6,6 @@ import SecondaryCta from '@/components/module/home/SecondaryCta';
 import { TeamSection } from '@/components/module/about/TeamSection';
 import type { Metadata } from 'next';
 
-
-
-
 export const metadata: Metadata = {
   title: 'About Us',
   description:
@@ -23,11 +20,6 @@ export const metadata: Metadata = {
     url: 'https://prolaunch.tech/about',
   },
 };
-
-
-
-
-
 
 export default function AboutPage() {
   return (

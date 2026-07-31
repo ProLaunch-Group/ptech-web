@@ -16,10 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
-
-
 function FaqPage() {
   return (
     <section aria-labelledby="Faq-page">

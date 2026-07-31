@@ -24,7 +24,8 @@ const nextConfig: NextConfig = {
 
   // Removes console.log statements in production builds to reduce bundle size
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+    removeConsole:
+      process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
   },
 };
 

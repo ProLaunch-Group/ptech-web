@@ -3,9 +3,6 @@ import FormSection from '@/components/module/contact/FormSection';
 import { WhyProLaunchTechnologies } from '@/components/module/contact/WhyProLaunchTechnologies';
 import type { Metadata } from 'next';
 
-
-
-
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
@@ -20,12 +17,6 @@ export const metadata: Metadata = {
     url: 'https://prolaunch.tech/contact',
   },
 };
-
-
-
-
-
-
 
 function ContactPage() {
   return (
