@@ -16,9 +16,11 @@ export function TeamSection() {
             subtitle="Our technology experts, your partners."
             variant="secondary"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-4">
+          <div className="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto mt-4 ">
             {TEAM_MEMBERS.map((member: TeamMember) => (
-              <TeamCard key={member.id} member={member} />
+              <div key={member.id} className="w-full sm:w-[350px] lg:w-[380px]">
+                <TeamCard member={member} />
+              </div>
             ))}
           </div>
         </div>
