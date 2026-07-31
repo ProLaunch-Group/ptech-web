@@ -147,7 +147,6 @@ export interface FaqGroup {
   items: FaqItem[];
 }
 
-
 //Team Section(About us)
 export interface TeamMember {
   id: string;
