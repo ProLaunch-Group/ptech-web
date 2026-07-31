@@ -11,6 +11,7 @@ import {
   FOOTER_CERTIFICATIONS,
 } from '@/constants/service';
 import { SocialLink } from '@/types/service.types';
+import ScrollToTop from './ScrollToTop';
 
 const SOCIAL_ICONS: Record<SocialLink['icon'], React.JSX.Element> = {
   Ln: (
@@ -53,7 +54,7 @@ const SOCIAL_ICONS: Record<SocialLink['icon'], React.JSX.Element> = {
 
 export default function Footer() {
   return (
-    <footer className="bg-deepNavy font-sans text-slate-300 py-9 px-6 md:px-12 lg:px-24 border-t border-slate-800">
+    <footer className="bg-deepNavy font-sans text-slate-300 py-9 px-6 md:px-12 lg:px-24 border-t border-slate-800 relative">
       {/* Main Grid Wrapper */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
         {/* Column 1: Profile & Direct Contacts */}
@@ -194,6 +195,9 @@ export default function Footer() {
           reserved.
         </p>
       </div>
+
+      {/* Back to Top Floating Button */}
+      <ScrollToTop />
     </footer>
   );
 }
