@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import HeroCard from '@/components/module/home/HeroCard';
-import { ArrowRight, ChevronRight, Shield } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
 import { slideFromLeft, slideFromRight } from '@/libs/motion-variants';
@@ -78,24 +78,6 @@ export default function Hero() {
           {/* Right Side: Visual Dashboard Panel */}
           <aside className="relative" aria-label="Live System Uptime Metrics">
             <HeroCard />
-
-            {/* Floating Contextual Badge */}
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ y: [0, 8, 0], opacity: 1 }}
-              transition={{
-                repeat: Infinity,
-                duration: 4,
-                ease: 'easeInOut',
-                delay: 1,
-              }}
-              className="absolute -top-4 -right-4 bg-[#000000] rounded-xl px-4 py-2.5 shadow-xl flex items-center gap-2"
-            >
-              <Shield size={14} className="text-[#10B981]" aria-hidden="true" />
-              <span className="text-white text-xs font-semibold font-sans">
-                40% faster deployment
-              </span>
-            </motion.span>
           </aside>
         </div>
       </section>

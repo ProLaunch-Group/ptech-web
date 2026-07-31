@@ -17,6 +17,22 @@ export default function AiQualifierWidget() {
 
   const { openWidget, openAIQualifier, closeAIQualifier } = useAIQualifier();
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeAIQualifier();
+      }
+    };
+
+    if (openWidget) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [openWidget, closeAIQualifier]);
+
   //Helper function: Fires the sound AND the visual scale/bounce animation
   const triggerAttentionChime = () => {
     setIsRinging(true);

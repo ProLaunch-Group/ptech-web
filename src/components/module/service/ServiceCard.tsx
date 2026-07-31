@@ -3,7 +3,11 @@
 import { ArrowRight } from 'lucide-react';
 import { useAIQualifier } from '@/contextApi/AIQualifierContext';
 import { ServiceItemProps } from '@/types/service.types';
-import { fadeUp, whileInViewProps } from '@/libs/motion-variants';
+import {
+  fadeUp,
+  slideFromRight,
+  whileInViewProps,
+} from '@/libs/motion-variants';
 import { motion } from 'framer-motion';
 
 export default function ServiceCard({
@@ -96,7 +100,9 @@ export default function ServiceCard({
         </p>
 
         {/* Trigger CTA Button */}
-        <button
+        <motion.button
+          {...whileInViewProps}
+          variants={slideFromRight}
           onClick={openAIQualifier}
           className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#1e3a6e] hover:bg-[#f5a623] text-white font-sora font-semibold text-sm md:text-base rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
           aria-label={`${ctaText} via AI Qualifier Assistant`}
@@ -106,7 +112,7 @@ export default function ServiceCard({
             className="w-4 h-4 group-hover:translate-x-1 transition-transform"
             aria-hidden="true"
           />
-        </button>
+        </motion.button>
       </div>
     </motion.article>
   );
