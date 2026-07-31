@@ -11,7 +11,7 @@ export default function HowWeHelp() {
   return (
     <StaggerContainer>
       <section
-        className="flex flex-col bg-card items-center justify-center pt-8 pb-15 md:pt-15 md:pb-18 lg:-mt-12 px-4 lg:px-4 text-slate-900"
+        className="flex flex-col bg-card items-center justify-center pt-8 pb-15 md:pt-10 md:pb-22 lg:-mt-12 px-4 lg:px-4 text-slate-900"
         aria-labelledby="how-we-help-section"
       >
         <SectionTitle

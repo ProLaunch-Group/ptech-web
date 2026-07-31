@@ -81,7 +81,8 @@ export default function Hero() {
 
             {/* Floating Contextual Badge */}
             <motion.span
-              animate={{ y: [0, 8, 0] }}
+              initial={{ opacity: 0 }}
+              animate={{ y: [0, 8, 0], opacity: 1 }}
               transition={{
                 repeat: Infinity,
                 duration: 4,

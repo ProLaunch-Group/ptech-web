@@ -15,7 +15,7 @@ export default function BusinessChallenges() {
           {/* Header / Titles Section */}
 
           <SectionTitle
-            title=" The challenges"
+            title=" The challenge"
             description="Your infrastructure wasn't built for your current scale."
           />
 
