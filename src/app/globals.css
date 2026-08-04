@@ -72,6 +72,11 @@
   --color-lightBlue: var(--text-lightBlue);
   --color-amberGold: var(--text-amberGold);
   --color-electricBlue: var(--text-electricBlue);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
 
   --animate-marquee: marquee 25s linear infinite;
 
@@ -93,7 +98,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
   }
   body {
     @apply bg-background text-foreground transition-colors duration-300;
