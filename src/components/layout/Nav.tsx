@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
@@ -8,18 +8,21 @@ import { useTheme } from 'next-themes';
 import { navbarLinks } from '@/constants/constants';
 import { usePathname } from 'next/navigation';
 
+const emptySubscribe = () => () => {};
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [mounted, setMounted] = useState(false);
+
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   const { theme, setTheme, resolvedTheme } = useTheme();
   const pathName = usePathname();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Escape key handler to close mobile menu
   useEffect(() => {
