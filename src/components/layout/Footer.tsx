@@ -54,7 +54,7 @@ const SOCIAL_ICONS: Record<SocialLink['icon'], React.JSX.Element> = {
 
 export default function Footer() {
   return (
-    <footer className="bg-deepNavy font-sans text-slate-300 py-9 px-6 md:px-12 lg:px-24 border-t border-slate-800 relative">
+    <footer className="bg-slate-900 dark:bg-deepNavy font-sans text-slate-300 dark:text-slate-300 py-12 px-6 md:px-12 lg:px-24 border-t border-slate-800 relative transition-colors duration-300">
       {/* Main Grid Wrapper */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
         {/* Column 1: Profile & Direct Contacts */}
@@ -64,21 +64,31 @@ export default function Footer() {
             aria-label="ProLaunch Technologies footer"
             className="w-fit block"
           >
-            <Image
-              src="/prolaunch-logo2.png"
-              alt="ProLaunch Technologies Logo"
-              width={80}
-              height={50}
-              priority
-            />
+            <div className="flex items-center gap-2.5">
+              <Image
+                src="/prolaunch-logo2.png"
+                alt="ProLaunch Technologies Logo"
+                width={48}
+                height={48}
+                className="rounded-xl object-contain w-11 h-11"
+                priority
+              />
+              <span className="font-bold text-[17px] text-white tracking-tight font-sora">
+                ProLaunch
+                <span className="text-electricBlue font-sans">
+                  {' '}
+                  Technologies
+                </span>
+              </span>
+            </div>
           </Link>
 
-          <p className="text-sm leading-relaxed max-w-sm lg:-mt-2">
+          <p className="text-sm leading-relaxed text-slate-300 max-w-sm">
             {FOOTER_TAGLINE}
           </p>
 
           {/* Socials */}
-          <nav
+          <div
             aria-label="Social media links"
             className="flex items-center gap-3"
           >
@@ -89,48 +99,50 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visit our ${social.platform} page`}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-slate-700 bg-slate-900/50 text-xs font-medium hover:text-amberGold hover:border-amberGold transition-all duration-200"
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-slate-700 bg-slate-800/80 dark:bg-slate-900/50 text-xs font-medium text-slate-300 hover:text-amberGold hover:border-amberGold transition-all duration-200"
               >
                 {SOCIAL_ICONS[social.icon]}
               </a>
             ))}
-          </nav>
+          </div>
 
           {/* Contacts */}
           <address className="not-italic flex flex-col gap-3 text-sm pt-2">
             <a
               href={`mailto:${FOOTER_CONTACT.email}`}
-              className="flex items-center gap-3 hover:text-amberGold transition-colors duration-200"
+              className="flex items-center gap-3 text-slate-300 hover:text-amberGold transition-colors duration-200"
             >
-              <Mail className="w-4 h-4 text-blue-400" />
+              <Mail className="w-4 h-4 text-electricBlue" />
               <span>{FOOTER_CONTACT.email}</span>
             </a>
             <a
               href={`tel:${FOOTER_CONTACT.phone}`}
-              className="flex items-center gap-3 hover:text-amberGold transition-colors duration-200"
+              className="flex items-center gap-3 text-slate-300 hover:text-amberGold transition-colors duration-200"
             >
-              <Phone className="w-4 h-4 text-blue-400" />
+              <Phone className="w-4 h-4 text-electricBlue" />
               <span>{FOOTER_CONTACT.phone}</span>
             </a>
-            <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3 text-slate-300">
+              <MapPin className="w-4 h-4 text-electricBlue shrink-0 mt-0.5" />
               <span>{FOOTER_CONTACT.locations}</span>
             </div>
           </address>
         </section>
 
-        {/* Column 2: Services (Plain Text List) */}
+        {/* Column 2: Services Links */}
         <section className="flex flex-col gap-4">
-          <h3 className="text-white font-bold tracking-wide text-base">
+          <h3 className="text-white font-bold tracking-wide text-base font-sora">
             Services
           </h3>
-          <ul className="flex flex-col gap-3 text-sm text-slate-400 select-none">
+          <ul className="flex flex-col gap-3 text-sm list-none p-0 m-0">
             {FOOTER_SERVICES.map((service) => (
-              <li
-                key={service}
-                className="hover:text-amberGold transition-colors duration-200"
-              >
-                {service}
+              <li key={service}>
+                <Link
+                  href="/services"
+                  className="text-slate-300 hover:text-amberGold transition-colors duration-200 block"
+                >
+                  {service}
+                </Link>
               </li>
             ))}
           </ul>
@@ -138,15 +150,15 @@ export default function Footer() {
 
         {/* Column 3: Company (Interactive Links) */}
         <section className="flex flex-col gap-4">
-          <h3 className="text-white font-bold tracking-wide text-base">
+          <h3 className="text-white font-bold tracking-wide text-base font-sora">
             Company
           </h3>
-          <ul className="flex flex-col gap-3 text-sm">
+          <ul className="flex flex-col gap-3 text-sm list-none p-0 m-0">
             {FOOTER_COMPANY_LINKS.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="hover:text-amberGold hover:underline transition-colors duration-200 block"
+                  className="text-slate-300 hover:text-amberGold hover:underline transition-colors duration-200 block"
                 >
                   {link.label}
                 </Link>
@@ -155,31 +167,33 @@ export default function Footer() {
           </ul>
         </section>
 
-        {/* Column 4: Resources (Plain Text List) & Certifications */}
+        {/* Column 4: Resources Links & Certifications */}
         <section className="flex flex-col gap-4">
-          <h3 className="text-white font-bold tracking-wide text-base">
+          <h3 className="text-white font-bold tracking-wide text-base font-sora">
             Resources
           </h3>
-          <ul className="flex flex-col gap-3 text-sm text-slate-400 select-none mb-4">
+          <ul className="flex flex-col gap-3 text-sm list-none p-0 m-0 mb-2">
             {FOOTER_RESOURCES.map((resource) => (
-              <li
-                key={resource}
-                className="hover:text-amberGold transition-colors duration-200"
-              >
-                {resource}
+              <li key={resource}>
+                <Link
+                  href="/faq"
+                  className="text-slate-300 hover:text-amberGold transition-colors duration-200 block"
+                >
+                  {resource}
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* Certifications Block */}
-          <h4 className="text-white font-bold tracking-wide text-base pt-2">
+          <h4 className="text-white font-bold tracking-wide text-sm pt-2 font-sora">
             Certifications
           </h4>
           <div className="flex flex-wrap gap-2">
             {FOOTER_CERTIFICATIONS.map((badge) => (
               <span
                 key={badge}
-                className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 border text-electricBlue select-none"
+                className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/70 border border-blue-800/60 text-electricBlue select-none"
               >
                 {badge}
               </span>
@@ -189,11 +203,19 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright Bar */}
-      <div className="max-w-7xl font-sora mx-auto mt-8 pt-4 border-t border-slate-800/60 text-xs text-slate-500 text-center md:text-left">
+      <div className="max-w-7xl font-sora mx-auto mt-10 pt-6 border-t border-slate-800/80 text-xs text-slate-400 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
         <p>
           &copy; {new Date().getFullYear()} ProLaunch Technologies. All rights
           reserved.
         </p>
+        <div className="flex gap-6 text-slate-400">
+          <Link href="/faq" className="hover:text-amberGold transition-colors">
+            Privacy Policy
+          </Link>
+          <Link href="/faq" className="hover:text-amberGold transition-colors">
+            Terms of Service
+          </Link>
+        </div>
       </div>
 
       {/* Back to Top Floating Button */}
