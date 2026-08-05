@@ -261,9 +261,7 @@ export function ContactForm() {
             <option value="Cloud Migration & Management">
               Cloud Migration & Management
             </option>
-            <option value="DevOps Implementation">
-              DevOps Implementation
-            </option>
+            <option value="DevOps Implementation">DevOps Implementation</option>
             <option value="Custom Software Development">
               Custom Software Development
             </option>
@@ -275,7 +273,10 @@ export function ContactForm() {
             </option>
           </select>
           {errors.ServiceOfInterest && (
-            <p className="text-xs text-amberGold font-medium mt-0.5" role="alert">
+            <p
+              className="text-xs text-amberGold font-medium mt-0.5"
+              role="alert"
+            >
               {errors.ServiceOfInterest.message}
             </p>
           )}

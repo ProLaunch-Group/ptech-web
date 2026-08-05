@@ -21,7 +21,10 @@ export default function ServiceHero() {
           sizes="100vw"
         />
 
-        <div className="absolute inset-0 bg-deepNavy/85 backdrop-blur-[2px]" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-deepNavy/85 backdrop-blur-[2px]"
+          aria-hidden="true"
+        />
 
         {/* Content Container */}
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24 font-sora">
