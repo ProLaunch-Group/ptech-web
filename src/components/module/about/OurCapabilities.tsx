@@ -18,8 +18,8 @@ export default function OurCapabilities() {
 
   return (
     <StaggerContainer>
-      <section className="py-16 md:py-24 bg-background text-foreground transition-colors duration-300">
-        <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
             {/* Left Column: Heading & Messaging */}
             <div className="flex flex-col items-start lg:col-span-5 pt-2">
@@ -31,7 +31,7 @@ export default function OurCapabilities() {
 
               <motion.p
                 variants={slideFromLeft}
-                className="text-base font-normal sm:text-lg text-slate-600 dark:text-slate-300 font-sans leading-relaxed mt-4"
+                className="text-base font-normal sm:text-lg text-slate-500 font-sans leading-relaxed mt-2"
               >
                 Organizations stay with ProLaunch because we combine the
                 reliability they expect from a large firm with the

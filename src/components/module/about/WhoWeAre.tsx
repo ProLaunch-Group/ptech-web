@@ -10,12 +10,9 @@ import SectionTitle from '@/components/layout/SectionTitle';
 export default function WhoWeAre() {
   return (
     <StaggerContainer>
-      <section
-        className="py-16 md:py-24 bg-background transition-colors duration-300"
-        aria-labelledby="story-heading"
-      >
-        <header className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="py-10 lg:py-14" aria-labelledby="story-heading">
+        <header className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-20 lg:grid-cols-2">
             <article>
               <SectionTitle
                 title="Who We Are"
@@ -25,7 +22,7 @@ export default function WhoWeAre() {
 
               <motion.p
                 variants={slideFromLeft}
-                className="mt-6 leading-relaxed text-base lg:text-lg text-slate-700 dark:text-slate-200 font-sans font-medium"
+                className="mt-6 leading-8 text-base lg:text-lg text-slate-600 font-sans font-semibold"
               >
                 Founded to solve real-world engineering challenges, ProLaunch
                 Technologies partners with businesses to build scalable
@@ -35,7 +32,7 @@ export default function WhoWeAre() {
 
               <motion.p
                 variants={slideFromLeft}
-                className="mt-4 leading-relaxed text-slate-700 dark:text-slate-200 text-base lg:text-lg font-sans font-medium"
+                className="mt-4 leading-8 text-slate-600 text-base lg:text-lg font-sans font-semibold"
               >
                 Every engagement is guided by technical excellence, transparency
                 and long-term collaboration.
@@ -49,7 +46,7 @@ export default function WhoWeAre() {
                 width={700}
                 height={500}
                 loading="eager"
-                className="rounded-3xl object-cover shadow-xl border border-slate-200 dark:border-slate-800"
+                className="rounded-3xl object-cover shadow-xl scale-[0.9]"
               />
             </motion.figure>
           </div>

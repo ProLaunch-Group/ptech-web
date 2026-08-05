@@ -76,9 +76,9 @@ export function ContactForm() {
     <motion.div
       variants={fadeDown}
       {...whileInViewProps}
-      className="w-full bg-slate-900 dark:bg-deepNavy/90 border border-slate-700/80 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl transition-colors duration-300"
+      className="w-full bg-[#1e3a6e] border border-white/10 rounded-2xl p-6 sm:p-8 shadow-xl"
     >
-      <h3 className="text-xl font-bold text-white mb-6 font-sora">
+      <h3 className="text-xl font-bold text-[#e8f3ff] mb-6">
         Send Us a Message
       </h3>
 
@@ -93,7 +93,7 @@ export function ContactForm() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="fullName"
-              className="text-sm font-medium text-slate-200"
+              className="text-sm font-medium text-[#e8f3ff]"
             >
               Full Name{' '}
               <span className="text-amberGold" aria-hidden="true">
@@ -108,10 +108,10 @@ export function ContactForm() {
               aria-invalid={!!errors.fullName}
               aria-describedby={errors.fullName ? 'fullName-error' : undefined}
               {...register('fullName')}
-              className={`w-full px-4 py-3 rounded-lg bg-slate-800 dark:bg-[#0d1b32] text-white placeholder:text-slate-400 border transition-all text-sm font-medium focus:outline-none focus:ring-2 ${
+              className={`w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border transition-all text-sm font-medium focus:outline-none focus:ring-2 ${
                 errors.fullName
-                  ? 'border-amberGold focus:ring-amberGold'
-                  : 'border-slate-700 focus:ring-electricBlue'
+                  ? 'border-[#f5a623] focus:ring-[#f5a623]'
+                  : 'border-transparent focus:ring-[#0a84ff]'
               }`}
             />
             {errors.fullName && (
@@ -129,7 +129,7 @@ export function ContactForm() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="email"
-              className="text-sm font-medium text-slate-200"
+              className="text-sm font-medium text-[#e8f3ff]"
             >
               Email Address{' '}
               <span className="text-amberGold" aria-hidden="true">
@@ -144,10 +144,10 @@ export function ContactForm() {
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? 'email-error' : undefined}
               {...register('email')}
-              className={`w-full px-4 py-3 rounded-lg bg-slate-800 dark:bg-[#0d1b32] text-white placeholder:text-slate-400 border transition-all text-sm font-medium focus:outline-none focus:ring-2 ${
+              className={`w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border transition-all text-sm font-medium focus:outline-none focus:ring-2 ${
                 errors.email
-                  ? 'border-amberGold focus:ring-amberGold'
-                  : 'border-slate-700 focus:ring-electricBlue'
+                  ? 'border-[#f5a623] focus:ring-[#f5a623]'
+                  : 'border-transparent focus:ring-[#0a84ff]'
               }`}
             />
             {errors.email && (
@@ -162,13 +162,13 @@ export function ContactForm() {
           </div>
         </div>
 
-        {/* Company Name & Phone Number */}
+        {/*  Company Name & Phone Number */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Company Name */}
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="companyName"
-              className="text-sm font-medium text-slate-200"
+              className="text-sm font-medium text-[#e8f3ff]"
             >
               Company Name{' '}
               <span className="text-amberGold" aria-hidden="true">
@@ -180,15 +180,12 @@ export function ContactForm() {
               type="text"
               placeholder="Your company"
               aria-invalid={!!errors.companyName}
-              aria-describedby={
-                errors.companyName ? 'companyName-error' : undefined
-              }
               {...register('companyName')}
-              className="w-full px-4 py-3 rounded-lg bg-slate-800 dark:bg-[#0d1b32] text-white placeholder:text-slate-400 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-electricBlue transition-all text-sm font-medium"
+              className="w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#0a84ff] transition-all text-sm font-medium"
             />
             {errors.companyName && (
               <p
-                id="companyName-error"
+                id="message-error"
                 className="text-xs text-amberGold font-medium mt-0.5"
                 role="alert"
               >
@@ -201,10 +198,10 @@ export function ContactForm() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="phone"
-              className="text-sm font-medium text-slate-200"
+              className="text-sm font-medium text-[#e8f3ff]"
             >
               Phone Number{' '}
-              <span className="text-xs text-slate-400">(Optional)</span>
+              <span className="text-xs text-[#e8f3ff]/60">(Optional)</span>
             </label>
             <input
               id="phone"
@@ -213,10 +210,10 @@ export function ContactForm() {
               aria-invalid={!!errors.phone}
               aria-describedby={errors.phone ? 'phone-error' : undefined}
               {...register('phone')}
-              className={`w-full px-4 py-3 rounded-lg bg-slate-800 dark:bg-[#0d1b32] text-white placeholder:text-slate-400 border transition-all text-sm font-medium focus:outline-none focus:ring-2 ${
+              className={`w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border transition-all text-sm font-medium focus:outline-none focus:ring-2 ${
                 errors.phone
-                  ? 'border-amberGold focus:ring-amberGold'
-                  : 'border-slate-700 focus:ring-electricBlue'
+                  ? 'border-[#f5a623] focus:ring-[#f5a623]'
+                  : 'border-transparent focus:ring-[#0a84ff]'
               }`}
             />
             {errors.phone && (
@@ -230,12 +227,11 @@ export function ContactForm() {
             )}
           </div>
         </div>
-
-        {/* Service of Interest */}
+        {/* Service of interest */}
         <div className="flex flex-col gap-1.5">
           <label
-            htmlFor="serviceOfInterest"
-            className="text-sm font-medium text-slate-200"
+            htmlFor="Service of interest"
+            className="text-sm font-medium text-[#e8f3ff]"
           >
             Service of Interest{' '}
             <span className="text-amberGold" aria-hidden="true">
@@ -243,19 +239,16 @@ export function ContactForm() {
             </span>
           </label>
           <input
-            id="serviceOfInterest"
+            id="Service of interest"
             type="text"
-            placeholder="Cloud Migration / DevOps Implementation / Custom Software / IT Infrastructure Solutions"
+            placeholder="Cloud Migration & Management / DevOps Implementation / Custom Software Development / IT Infrastructure Solutions / Not sure yet — I need advice"
             aria-invalid={!!errors.ServiceOfInterest}
-            aria-describedby={
-              errors.ServiceOfInterest ? 'serviceOfInterest-error' : undefined
-            }
             {...register('ServiceOfInterest')}
-            className="w-full px-4 py-3 rounded-lg bg-slate-800 dark:bg-[#0d1b32] text-white placeholder:text-slate-400 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-electricBlue transition-all text-sm font-medium"
+            className="w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border border-transparent focus:outline-none focus:ring-2 focus:ring-[#0a84ff] transition-all text-sm font-medium"
           />
           {errors.ServiceOfInterest && (
             <p
-              id="serviceOfInterest-error"
+              id="message-error"
               className="text-xs text-amberGold font-medium mt-0.5"
               role="alert"
             >
@@ -264,11 +257,11 @@ export function ContactForm() {
           )}
         </div>
 
-        {/* Message Textarea */}
+        {/*  Message Textarea */}
         <div className="flex flex-col gap-1.5">
           <label
             htmlFor="challenge"
-            className="text-sm font-medium text-slate-200"
+            className="text-sm font-medium text-[#e8f3ff]"
           >
             Tell us your biggest technology challenge{' '}
             <span className="text-amberGold" aria-hidden="true">
@@ -281,17 +274,17 @@ export function ContactForm() {
             placeholder="e.g. Our servers keep going down, and we don't have an IT team to manage them. We need a reliable solution..."
             aria-required="true"
             aria-invalid={!!errors.challenge}
-            aria-describedby={errors.challenge ? 'challenge-error' : undefined}
+            aria-describedby={errors.challenge ? 'message-error' : undefined}
             {...register('challenge')}
-            className={`w-full px-4 py-3 rounded-lg bg-slate-800 dark:bg-[#0d1b32] text-white placeholder:text-slate-400 border transition-all text-sm font-medium resize-none focus:outline-none focus:ring-2 ${
+            className={`w-full px-4 py-3 rounded-lg bg-[#e8f3ff] text-[#1e3a6e] placeholder:text-[#1e3a6e]/50 border transition-all text-sm font-medium resize-none focus:outline-none focus:ring-2 ${
               errors.challenge
-                ? 'border-amberGold focus:ring-amberGold'
-                : 'border-slate-700 focus:ring-electricBlue'
+                ? 'border-[#f5a623] focus:ring-[#f5a623]'
+                : 'border-transparent focus:ring-[#0a84ff]'
             }`}
           />
           {errors.challenge && (
             <p
-              id="challenge-error"
+              id="message-error"
               className="text-xs text-amberGold font-medium mt-0.5"
               role="alert"
             >
@@ -303,11 +296,10 @@ export function ContactForm() {
         {/* Submit Button */}
         <div>
           <button
-            id="contact-submit-btn"
             type="submit"
             disabled={isSubmitting}
             aria-label="Send contact message"
-            className="px-7 py-3.5 rounded-xl bg-electricBlue hover:bg-blue-600 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-blue-500/25 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-sora"
+            className="px-6 py-3 rounded-lg bg-[#0a84ff] hover:bg-[#0a84ff]/90 text-white font-semibold text-sm transition-all duration-200 shadow-md shadow-[#0a84ff]/30 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>

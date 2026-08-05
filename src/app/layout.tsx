@@ -6,7 +6,6 @@ import Footer from '@/components/layout/Footer';
 import AiQualifierWidget from '@/components/ui/AiQualifierWidget';
 import PageTransition from '@/components/ui/PageTransition';
 import { AIQualifierProvider } from '@/contextApi/AIQualifierContext';
-import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/libs/utils';
 import { Toaster } from '@/components/ui/sonner';
 
@@ -109,7 +108,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={cn(
         'h-full',
         'antialiased',
@@ -119,25 +117,18 @@ export default function RootLayout({
         geist.variable
       )}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
-          <AIQualifierProvider>
-            <Nav />
-            <PageTransition>
-              <main className="min-h-screen pt-18">
-                {children}
-                <Toaster position="top-center" richColors />
-              </main>
-            </PageTransition>
-            <Footer />
-            <AiQualifierWidget />
-          </AIQualifierProvider>
-        </ThemeProvider>
+      <body className="min-h-full flex flex-col ">
+        <Nav />
+        <AIQualifierProvider>
+          <PageTransition>
+            <main className="min-h-screen pt-18 ">
+              {children}
+              <Toaster position="top-center" richColors />
+            </main>
+          </PageTransition>
+          <Footer />
+          <AiQualifierWidget />
+        </AIQualifierProvider>
       </body>
     </html>
   );

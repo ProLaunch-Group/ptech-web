@@ -12,21 +12,23 @@ export default function TestimonialSection() {
     <StaggerContainer>
       <section
         aria-labelledby="testimonials-heading"
-        className="py-20 md:py-28 bg-background text-foreground transition-colors duration-300 overflow-hidden"
+        className="py-20 md:py-28 bg-[#ffffff] text-black overflow-hidden"
       >
-        <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="TESTIMONIALS"
             subtitle="Don't take our word for it!"
-            description="See what some of our customers have to say about working with us."
+            description=" See what some of our customers have to say about working with us."
             variant="secondary"
           />
 
           {/* Reusable Stack Component Integration */}
+
           <StackedDeck
             items={testimonials}
             renderCard={(item: Testimonial) => (
-              <article className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200 dark:border-slate-800 relative min-h-[260px] flex flex-col justify-between">
+              // Testimonial Card Content UI
+              <article className="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-100 relative min-h-[260px] flex flex-col justify-between">
                 {/* Top Row: Quote & Company Logo */}
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -42,25 +44,25 @@ export default function TestimonialSection() {
                     </div>
 
                     {/* Company Logo Badge */}
-                    <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 rounded-xl border border-amberGold">
-                      <span className="text-xs font-bold text-slate-900 dark:text-amberGold font-sans uppercase tracking-wider">
+                    <div className="flex items-center gap-2 bg-slate-50 px-3 py-1.5 rounded-xl border border-[#f5a623]">
+                      <span className="text-xs font-bold text-slate-900 font-sans uppercase tracking-wider">
                         {item.companyName}
                       </span>
                     </div>
                   </div>
 
                   {/* Quote Text */}
-                  <blockquote className="text-slate-700 dark:text-slate-200 font-sans text-base sm:text-lg leading-relaxed mb-6 font-normal">
+                  <blockquote className="text-slate-700 font-sans text-base sm:text-lg leading-relaxed mb-6 font-normal">
                     &quot;{item.quote}&quot;
                   </blockquote>
                 </div>
 
                 {/* Bottom Row: Author Details */}
-                <footer className="pt-4 border-t border-slate-100 dark:border-slate-800">
-                  <p className="font-sora font-bold text-slate-900 dark:text-white text-base sm:text-lg">
+                <footer className="pt-4 border-t border-slate-100">
+                  <p className="font-sora font-bold text-deepNavy text-base sm:text-lg">
                     {item.authorName}
                   </p>
-                  <p className="font-sans text-sm text-slate-500 dark:text-slate-400 font-medium">
+                  <p className="font-sans text-sm text-slate-500 font-medium">
                     {item.authorRole}
                   </p>
                 </footer>
