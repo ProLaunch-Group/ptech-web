@@ -28,7 +28,7 @@ export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
     imageUrl: '/Home/HowWeHelp-images/operational.png',
     title: 'Cloud Migration & Infrastructure Modernization',
     description:
-      'We handle the full migration to AWS and manage the infrastructure ongoing to improve system performance and eliminate operational complexity.',
+      'For businesses held back by expensive on-premise hardware or legacy systems, we lead the transition to secure, cloud-native environments. We handle the full migration to AWS and manage the infrastructure ongoing to improve system performance and eliminate operational complexity.',
     outcome: 'Lower operational costs and 99.9% uptime.',
     features: [
       { label: 'Cloud Migration', iconName: 'cloud' },
@@ -84,6 +84,7 @@ export const HOW_WE_HELP_SERVICES: ServiceCardData[] = [
     ctaLink: '/about#it-solutions',
   },
 ];
+
 export const FOOTER_TAGLINE =
   'Your trusted technology partner for cloud migration, DevOps, custom software, and IT infrastructure that scales with your ambitions.';
 
@@ -108,7 +109,7 @@ export const FOOTER_SOCIALS: SocialLink[] = [
 
 export const FOOTER_CONTACT: ContactInfo = {
   email: 'tech@prolaunchgroup.org',
-  phone: '+234 815 456 3245',
+  phone: '+234 8154 563 245',
   locations: 'Abuja, Nigeria',
 };
 
@@ -139,13 +140,13 @@ export const FOOTER_CERTIFICATIONS: string[] = [
   'would be updated',
 ];
 
-// Mission cards for WHo We Are section for the About page
+// Mission cards for Who We Are section for the About page
 export const cards: MissionCardProps[] = [
   {
     icon: Compass,
     title: 'Our Mission',
     description:
-      'To deliver enterprise-grade technology solutions that transform how businesses operate, scale, and compete in the digital economy- positioning technology as a growth driver, not a cost center',
+      'To deliver enterprise-grade technology solutions that transform how businesses operate, scale, and compete in the digital economy; positioning technology as a growth driver, not a cost center.',
   },
   {
     icon: Target,
@@ -166,7 +167,7 @@ export const principles = [
     icon: ShieldCheck,
     title: 'Precision',
     description:
-      'Every solution we engineered to exact requirements. We do not approximate, we execute',
+      "Every solution is engineered to exact requirements. We don't approximate; we execute.",
   },
   {
     icon: Lightbulb,
@@ -196,7 +197,7 @@ export const principles = [
     icon: Gem,
     title: 'Accountability',
     description:
-      'We own the final outcome. If it does not work for your business. It does not work for us.',
+      "We own the final outcome. If it doesn't work for your business, it doesn't work for us.",
   },
 ];
 
@@ -250,7 +251,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     quote:
-      'Migrating our AWS infrastructure with zero downtime seemed impossible until we engaged ProLaunch. Their engineering team owned outcomes, not just deliverables.',
+      'ProLaunch cut our cloud spend by 40% and stabilized our uptime in under 3 months.',
     authorName: 'Amina Bello',
     authorRole: 'Head of Product, Fintech Solutions',
     avatarUrl:
@@ -319,7 +320,7 @@ export const metrics: MetricItem[] = [
 export const servicesData: ServiceItemProps[] = [
   {
     id: 'cloud-migration',
-    number: 'SERVICE 01',
+    number: '01',
     title: 'Cloud Migration & Management',
     descriptions: [
       'Stop overpaying for rigid, unreliable infrastructure. As a core offering, we transition your business to AWS cloud environments that turn hosting from a cost center into a scalability engine, ensuring your systems grow as fast as your revenue does.',
@@ -333,11 +334,11 @@ export const servicesData: ServiceItemProps[] = [
       'Continuous monitoring and expert support',
     ],
     tagline: 'Lower costs. Better uptime. Zero IT firefighting.',
-    ctaText: 'Talk to Us About Cloud Migration',
+    ctaText: 'Talk to Us About Your Cloud Migration',
   },
   {
     id: 'devops-implementation',
-    number: 'SERVICE 02',
+    number: '02',
     title: 'DevOps Implementation',
     descriptions: [
       'Slow release cycles and deployment failures drain resources and damage client trust. We implement high-velocity DevOps pipelines that automate the path to production, significantly reducing time-to-market for your new features.',
@@ -351,11 +352,11 @@ export const servicesData: ServiceItemProps[] = [
       'More reliable and predictable systems',
     ],
     tagline: 'Ship more. Break less. Release with confidence.',
-    ctaText: 'Talk to Us About DevOps',
+    ctaText: 'Talk to Us About Your DevOps',
   },
   {
     id: 'custom-software',
-    number: 'SERVICE 03',
+    number: '03',
     title: 'Custom Software Development',
     descriptions: [
       'Off-the-shelf software forces you to compromise your business logic. We build bespoke digital solutions designed to optimize your specific workflows, resulting in immediate gains in operational speed and user productivity.',
@@ -369,11 +370,11 @@ export const servicesData: ServiceItemProps[] = [
       'Long-term business flexibility',
     ],
     tagline: 'Software built for your process. Not the other way around.',
-    ctaText: 'Talk to Us About Custom Software',
+    ctaText: 'Talk to Us About Your Custom Software',
   },
   {
     id: 'it-infrastructure',
-    number: 'SERVICE 04',
+    number: '04',
     title: 'IT Infrastructure Solutions',
     descriptions: [
       'As a foundational core offering, we design and manage the resilient technology backbone that your entire operation depends on. We move you from reactive repairs to proactive stability, ensuring business continuity across your entire digital estate.',
@@ -387,7 +388,7 @@ export const servicesData: ServiceItemProps[] = [
       'Infrastructure designed and scaled for growth',
     ],
     tagline: 'Resilient infrastructure. Secure by design.',
-    ctaText: 'Talk to Us About Infrastructure',
+    ctaText: 'Talk to Us About Your Infrastructure',
   },
 ];
 
@@ -503,17 +504,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
     bio: 'As the Founder of ProLaunch Group and a hands-on Cloud & DevOps Engineer, Mary-Queen bridges the gap between complex infrastructure challenges and clear business strategy. She leads our vision with a commitment to technical precision and a results-led approach, ensuring that technology serves as an accelerator—not a bottleneck—for your business.',
     image: '/About/TeamSection-image/ceo.jpeg',
   },
-];
-
-/**
- * 
- * 
- * 
- *  {
+  {
     id: 'emmanuel-adenuel',
     name: 'Emmanuel Adenuel',
     role: 'CTO',
     bio: 'As our CTO and a veteran Fullstack Software Developer, Emmanuel leads our technical architecture and software delivery. He ensures every line of code and every infrastructure decision is engineered for performance, reliability, and security, turning ambitious business goals into high-functioning digital reality.',
     image: '/images/team/emmanuel.jpg',
   },
- */
+];

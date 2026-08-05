@@ -73,28 +73,28 @@ export const navbarLinks = ['Home', 'About', 'Services', 'Contact'];
 
 export const challengesData: ChallengeCard[] = [
   {
-    audience: 'CTOs',
-    title: 'Cloud bills keep climbing',
+    audience: 'For CTOs',
+    title: 'Spiraling Cloud Costs & Operational Debt',
     description:
-      'Struggling with spiraling cloud costs and mounting operational debt.',
+      'Struggling with spiraling cloud costs and mounting operational debt?',
   },
   {
-    audience: 'Founders',
-    title: 'Product development bottlenecks',
+    audience: 'For Founders',
+    title: 'Rapid & Reliable Development',
     description:
-      "Need a rapid development team that understands how to ship products that don't crash.",
+      "Need a rapid development system that ships products that don't crash?",
   },
   {
-    audience: 'Regulated Industries',
-    title: 'Security & compliance gaps',
+    audience: 'For Regulated Industries',
+    title: 'Security & Compliance (SOC2/HIPAA)',
     description:
-      'Need iron-clad security and compliance (SOC2/HIPAA) without sacrificing speed.',
+      'Need iron-clad security and compliance (SOC2/HIPAA) without sacrificing speed?',
   },
   {
-    audience: 'Businesses on Legacy Infrastructure',
-    title: 'Legacy infrastructure challenges',
+    audience: 'For Businesses',
+    title: 'On-Premise Risk & Software Scale',
     description:
-      'Struggling with the risks and downtime associated with moving from on-premise hardware to the cloud.',
+      'Struggling with the risks and downtime associated with moving from on-premise hardware to the cloud? Looking to build and develop custom software applications or company websites?',
   },
 ];
 

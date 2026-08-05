@@ -8,12 +8,12 @@ import { whileInViewProps } from '@/libs/motion-variants';
 
 export default function TrustedBy() {
   return (
-    <section className="border-y border-white/5 py-8 md:pt-12 md:pb-0 md:mt-4 overflow-hidden border-2 border-black">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
+    <section className="border-y border-slate-200 dark:border-slate-800 py-8 bg-background text-foreground transition-colors duration-300 overflow-hidden">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24 mb-6">
         <motion.h2
           {...whileInViewProps}
           variants={fadeUp}
-          className="font-sora  font-semibold text-xs md:text-sm tracking-wide  text-center md:text-left"
+          className="font-sora font-semibold text-xs md:text-sm tracking-wider uppercase text-slate-500 dark:text-slate-400 text-center md:text-left"
         >
           Trusted by industry leaders in EdTech, FinTech, HealthTech, and SaaS.
         </motion.h2>
@@ -34,7 +34,7 @@ export default function TrustedBy() {
                   alt={`${logo.name} logo`}
                   width={logo.width}
                   height={logo.height}
-                  className="h-auto w-auto opacity-40 hover:opacity-100 transition-opacity duration-200 grayscale hover:grayscale-0 cursor-pointer object-contain"
+                  className="h-auto w-auto opacity-50 dark:opacity-40 hover:opacity-100 transition-opacity duration-200 grayscale hover:grayscale-0 cursor-pointer object-contain"
                 />
               </li>
             ))}
@@ -52,7 +52,7 @@ export default function TrustedBy() {
                   alt=""
                   width={logo.width}
                   height={logo.height}
-                  className="opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer object-contain"
+                  className="h-auto w-auto opacity-50 dark:opacity-40 hover:opacity-100 transition-opacity duration-200 grayscale hover:grayscale-0 cursor-pointer object-contain"
                 />
               </li>
             ))}
