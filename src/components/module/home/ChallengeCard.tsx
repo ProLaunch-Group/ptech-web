@@ -9,23 +9,23 @@ export default function ChallengeCard({ item }: ChallengeCardProps) {
     <motion.li
       variants={fadeUp2}
       {...whileInViewProps}
-      className="w-full p-6 md:p-8 bg-white dark:bg-slate-900/90 border-l-4 border-amberGold rounded-3xl border-y border-r border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+      className="w-full p-6 md:p-8 bg-[#ffffff] border-l-4 border-[#f5a623] rounded-3xl  hover:shadow-sm hover:shadow-amberGold  transition-shadow duration-300 flex flex-col justify-between"
     >
       <div>
-        {/* Badge */}
-        <span className="inline-block px-3 py-1 text-xs font-bold tracking-wide text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/70 border border-amber-300/40 rounded-full font-sans mb-4">
+        {/*  Badge */}
+        <span className="inline-block px-2.5 py-1 text-xs font-semibold tracking-wide text-slate-600 bg-amber-100 rounded-md font-sans mb-4 animate-pulse">
           {item.audience}
         </span>
 
         {/* Card Title */}
         {item.title && (
-          <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white font-sora mb-3 tracking-tight">
+          <h3 className="text-lg md:text-xl font-bold text-deepNavy font-sora mb-2 tracking-tight">
             {item.title}
           </h3>
         )}
 
-        {/* Card Body Text */}
-        <p className="text-sm md:text-base font-normal text-slate-700 dark:text-slate-200 font-sans leading-relaxed">
+        {/*Card Body Text */}
+        <p className="text-sm md:text-base font-normal text-black font-sans leading-relaxed">
           {item.description}
         </p>
       </div>
