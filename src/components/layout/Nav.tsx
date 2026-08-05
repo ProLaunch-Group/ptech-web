@@ -76,7 +76,7 @@ const Navbar = () => {
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl w-full mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-18 py-3">
           {/* Logo */}
           <Link
@@ -84,13 +84,17 @@ const Navbar = () => {
             className="flex items-center gap-2.5 group"
             aria-label="ProLaunch Technologies Home"
           >
-            <div className="relative p-1 rounded-xl bg-slate-100 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative p-1 rounded-xl bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/prolaunch-logo2.png"
+                src={
+                  isDark
+                    ? '/images/prolaunch-logo2.png'
+                    : '/images/ProLaunch_Technologies_Logo_Light_HQ.png'
+                }
                 alt="ProLaunch Technologies logo"
-                width={48}
-                height={48}
-                className="object-contain w-9 h-9 md:w-10 md:h-10 rounded-lg"
+                width={120}
+                height={40}
+                className="object-contain h-9 md:h-10 w-auto rounded-lg"
                 priority
               />
             </div>
@@ -108,8 +112,7 @@ const Navbar = () => {
             <section aria-label="Main navigation">
               <ul className="flex items-center gap-8 list-none m-0 p-0">
                 {navbarLinks.map((link) => {
-                  const href =
-                    link === 'Home' ? '/' : `/${link.toLowerCase()}`;
+                  const href = link === 'Home' ? '/' : `/${link.toLowerCase()}`;
                   const isActive = pathName === href;
 
                   return (

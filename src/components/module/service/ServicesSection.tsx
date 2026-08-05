@@ -8,18 +8,17 @@ export default function ServicesSection() {
     <StaggerContainer>
       <section
         aria-label="ProLaunch Technologies Core Services List"
-        className="w-full bg-[#e8f3ff] pb-6"
+        className="w-full bg-background transition-colors duration-300 pb-12"
       >
         {servicesData.map((service, index) => (
           <ServiceCard key={service.id} {...service} isEven={index % 2 !== 0} />
         ))}
 
-        <article className="mx-auto max-w-5xl px-5 lg:px-2 ">
+        <article className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24 pt-12">
           <SectionTitle
             title="Why ProLaunch Technologies"
             subtitle="A partner, not just a vendor"
-            description=" We help businesses reduce complexity, improve reliability, and build scalable technology solutions that create measurable business value.
-                  We own outcomes, not just deliverables."
+            description="We help businesses reduce complexity, improve reliability, and build scalable technology solutions that create measurable business value. We own outcomes, not just deliverables."
             variant="secondary"
           />
         </article>

@@ -10,15 +10,12 @@ import { ShieldCheckIcon } from 'lucide-react';
 import SectionTitle from '@/components/layout/SectionTitle';
 
 export default function FaqSection() {
-  // Track which accordion item is currently open (null if all closed)
   const [openId, setOpenId] = useState<string | null>('gen-1');
 
-  // Toggle function: Opens item if closed, or closes it if clicked again
   const handleToggle = (id: string) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
 
-  // Group FAQs by category using reduce
   const groupedFaqs = faqData.reduce(
     (acc, item) => {
       if (!acc[item.category]) {
@@ -31,19 +28,18 @@ export default function FaqSection() {
   );
 
   return (
-    <section className="py-16 md:py-24 bg-[#e8f3ff]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-background text-foreground transition-colors duration-300">
+      <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
         {/* Section Header */}
         <SectionTitle
           title="Got Questions?"
           subtitle="Frequently Asked Questions"
-          description="Everything you need to know about our cloud, DevOps, software engineering,
-        and infrastructure solutions."
+          description="Everything you need to know about our cloud, DevOps, software engineering, and infrastructure solutions."
           variant="secondary"
         />
 
         {/* Categories & Accordion List */}
-        <div className="space-y-10 sm:space-y-12">
+        <div className="space-y-10 sm:space-y-12 max-w-5xl mx-auto mt-8">
           {Object.entries(groupedFaqs).map(([category, items]) => (
             <motion.div
               key={category}
@@ -52,9 +48,9 @@ export default function FaqSection() {
               className="space-y-4"
             >
               {/* Category Subheader */}
-              <div className="flex items-center gap-3 border-b border-white/10 pb-2">
-                <span className="w-2 h-2 rounded-full bg-[#f5a623]" />
-                <h3 className="text-lg sm:text-xl font-bold font-sora text-deepNavy">
+              <div className="flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-amberGold" />
+                <h3 className="text-lg sm:text-xl font-bold font-sora text-slate-900 dark:text-white">
                   {category}
                 </h3>
               </div>
