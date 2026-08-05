@@ -100,10 +100,7 @@ const Navbar = () => {
             </div>
             <span className="font-bold text-[17px] md:text-18 text-slate-900 dark:text-white tracking-tight font-sora transition-colors duration-200">
               ProLaunch
-              <span className="text-electricBlue font-sans">
-                {' '}
-                Technologies
-              </span>
+              <span className="text-electricBlue font-sans"> Technologies</span>
             </span>
           </Link>
 

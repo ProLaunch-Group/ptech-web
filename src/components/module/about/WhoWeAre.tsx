@@ -10,7 +10,10 @@ import SectionTitle from '@/components/layout/SectionTitle';
 export default function WhoWeAre() {
   return (
     <StaggerContainer>
-      <section className="py-16 md:py-24 bg-background transition-colors duration-300" aria-labelledby="story-heading">
+      <section
+        className="py-16 md:py-24 bg-background transition-colors duration-300"
+        aria-labelledby="story-heading"
+      >
         <header className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <article>
