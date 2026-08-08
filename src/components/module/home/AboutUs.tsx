@@ -6,7 +6,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronsRight, Globe, ShieldCheck, Headphones } from 'lucide-react';
 import { StaggerContainer } from '@/components/animation/StaggerContainer';
-import { fadeUp, slideFromLeft, whileInViewProps } from '@/libs/motion-variants';
+import {
+  fadeUp,
+  slideFromLeft,
+  whileInViewProps,
+} from '@/libs/motion-variants';
 import SectionTitle from '@/components/layout/SectionTitle';
 
 const whoWeAreCards = [
