@@ -8,10 +8,7 @@ const SecondaryCta = () => {
   const { openAIQualifier } = useAIQualifier();
 
   return (
-    <section
-      aria-labelledby="cta-heading"
-      className="py-10 md:py-16 w-full"
-    >
+    <section aria-labelledby="cta-heading" className="py-10 md:py-16 w-full">
       <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex w-full flex-col gap-6 rounded-3xl bg-linear-to-r from-electricBlue via-blue-700 to-deepNavy px-8 py-10 md:py-12 lg:flex-row lg:items-center lg:justify-between shadow-2xl relative overflow-hidden">
           <article className="flex flex-col items-start gap-5 sm:flex-row sm:items-center relative z-10">

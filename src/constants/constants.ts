@@ -14,58 +14,58 @@ export const services = [
 
 export const logos = [
   {
-    name: 'Paystack',
-    src: '/Home/trustedBy-images/paystack.png',
-    width: 130,
-    height: 35,
-  },
-  {
-    name: 'Moniepoint',
-    src: '/Home/trustedBy-images/moniepoint.png',
-    width: 140,
-    height: 35,
-  },
-  {
-    name: 'Flutterwave',
-    src: '/Home/trustedBy-images/flutterwave.png',
-    width: 140,
-    height: 35,
-  },
-  {
-    name: 'Interswitch',
-    src: '/Home/trustedBy-images/interswitch.png',
-    width: 140,
-    height: 35,
-  },
-  {
-    name: 'aws',
+    name: 'AWS',
     src: '/Home/trustedBy-images/awsimage.png',
     width: 120,
-    height: 10,
+    height: 40,
   },
   {
-    name: 'google',
+    name: 'Google Cloud',
     src: '/Home/trustedBy-images/goggleimage.png',
     width: 120,
-    height: 10,
+    height: 40,
   },
   {
-    name: 'gdpr',
-    src: '/Home/trustedBy-images/gdprimage.png',
-    width: 120,
-    height: 10,
-  },
-  {
-    name: 'iso',
-    src: '/Home/trustedBy-images/isoimage.png',
-    width: 120,
-    height: 10,
-  },
-  {
-    name: 'microsoft',
+    name: 'Microsoft',
     src: '/Home/trustedBy-images/microsoftimage.png',
-    width: 120,
-    height: 10,
+    width: 130,
+    height: 40,
+  },
+  {
+    name: 'Remita',
+    src: '/Home/trustedBy-images/remita.png',
+    width: 130,
+    height: 40,
+  },
+  {
+    name: 'ProLaunch Academy',
+    src: '/Home/trustedBy-images/pacademyimage.png',
+    width: 140,
+    height: 40,
+  },
+  {
+    name: 'ProLaunch Careers',
+    src: '/Home/trustedBy-images/pcareersimage.png',
+    width: 140,
+    height: 40,
+  },
+  {
+    name: 'ProLaunch Group',
+    src: '/Home/trustedBy-images/prolaunchimage.png',
+    width: 140,
+    height: 40,
+  },
+  {
+    name: 'ISO Certified',
+    src: '/Home/trustedBy-images/isoimage.png',
+    width: 100,
+    height: 40,
+  },
+  {
+    name: 'GDPR Compliant',
+    src: '/Home/trustedBy-images/gdprimage.png',
+    width: 100,
+    height: 40,
   },
 ];
 

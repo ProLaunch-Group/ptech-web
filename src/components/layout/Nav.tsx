@@ -125,10 +125,7 @@ const Navbar = () => {
             </div>
             <span className="font-bold text-[17px] md:text-18 text-slate-900 dark:text-white tracking-tight font-sora transition-colors duration-200">
               ProLaunch
-              <span className="text-electricBlue font-sans">
-                {' '}
-                Technologies
-              </span>
+              <span className="text-electricBlue font-sans"> Technologies</span>
             </span>
           </Link>
 
@@ -137,8 +134,7 @@ const Navbar = () => {
             <section aria-label="Main navigation">
               <ul className="flex items-center gap-7 list-none m-0 p-0">
                 {navbarLinks.map((link) => {
-                  const href =
-                    link === 'Home' ? '/' : `/${link.toLowerCase()}`;
+                  const href = link === 'Home' ? '/' : `/${link.toLowerCase()}`;
                   const isActive = pathName === href;
 
                   return (
