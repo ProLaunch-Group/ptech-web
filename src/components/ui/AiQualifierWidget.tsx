@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Script from 'next/script';
 import { X, Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
@@ -12,8 +11,9 @@ import {
 import { useAIQualifier } from '@/contextApi/AIQualifierContext';
 
 export default function AiQualifierWidget() {
-  const [loadWidgetButton, setLoadWidgetButton] = useState<boolean>(false);
+  const [loadWidgetButton, setLoadWidgetButton] = useState<boolean>(true);
   const [isRinging, setIsRinging] = useState<boolean>(false);
+  const [iframeLoading, setIframeLoading] = useState<boolean>(true);
 
   const { openWidget, openAIQualifier, closeAIQualifier } = useAIQualifier();
 
@@ -33,7 +33,7 @@ export default function AiQualifierWidget() {
     };
   }, [openWidget, closeAIQualifier]);
 
-  //Helper function: Fires the sound AND the visual scale/bounce animation
+  // Helper function: Fires the sound AND the visual scale/bounce animation
   const triggerAttentionChime = () => {
     setIsRinging(true);
     setTimeout(() => setIsRinging(false), 800);
@@ -44,11 +44,9 @@ export default function AiQualifierWidget() {
     return audio.play();
   };
 
-  // 9-Second Timer + Sound Fallback Listener
+  // Sound and attention pulse listener after 3.5 seconds
   useEffect(() => {
     const timerWidget = setTimeout(() => {
-      setLoadWidgetButton(true);
-
       triggerAttentionChime().catch(() => {
         // Fallback: If blocked by browser autoplay policy, trigger on first user gesture
         const playOnFirstInteraction = () => {
@@ -69,7 +67,7 @@ export default function AiQualifierWidget() {
           once: true,
         });
       });
-    }, 9000);
+    }, 3500);
 
     return () => clearTimeout(timerWidget);
   }, []);
@@ -84,13 +82,6 @@ export default function AiQualifierWidget() {
 
   return (
     <>
-      {/* Zapier Script Loader */}
-      <Script
-        src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
-        type="module"
-        strategy="afterInteractive"
-      />
-
       {/* Main Floating Container (Bottom Right) */}
       <section className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
         {/* 1. Expanded Floating Card Drawer */}
@@ -126,13 +117,23 @@ export default function AiQualifierWidget() {
               </button>
             </div>
 
-            {/* Zapier Web Component Body */}
-            <div className="flex-1 w-full bg-slate-50 relative overflow-hidden">
-              {React.createElement('zapier-interfaces-chatbot-embed', {
-                'is-popup': 'false',
-                'chatbot-id': 'cms7h5icz004djyt1a0nluv0a',
-                style: { width: '100%', height: '100%' },
-              })}
+            {/* Chatbot Body */}
+            <div className="flex-1 w-full bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+              {iframeLoading && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-900 z-10 gap-3">
+                  <div className="w-8 h-8 border-3 border-electricBlue border-t-transparent rounded-full animate-spin" />
+                  <p className="text-xs font-sans text-slate-500 dark:text-slate-400">
+                    Connecting to ProLaunch AI Assistant...
+                  </p>
+                </div>
+              )}
+              <iframe
+                src="https://interfaces.zapier.com/embed/chatbot/cms7h5icz004djyt1a0nluv0a"
+                className="w-full h-full border-0"
+                allow="clipboard-write"
+                title="ProLaunch AI Assistant"
+                onLoad={() => setIframeLoading(false)}
+              />
             </div>
           </motion.section>
         )}
