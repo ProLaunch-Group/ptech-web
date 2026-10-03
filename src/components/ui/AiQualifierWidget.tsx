@@ -11,7 +11,7 @@ import {
 import { useAIQualifier } from '@/contextApi/AIQualifierContext';
 
 export default function AiQualifierWidget() {
-  const [loadWidgetButton, setLoadWidgetButton] = useState<boolean>(true);
+  const [loadWidgetButton] = useState<boolean>(true);
   const [isRinging, setIsRinging] = useState<boolean>(false);
   const [iframeLoading, setIframeLoading] = useState<boolean>(true);
 

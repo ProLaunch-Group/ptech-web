@@ -3,7 +3,6 @@
 import { fadeUp, whileInViewProps } from '@/libs/motion-variants';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Share2 } from 'lucide-react';
-import Link from 'next/link';
 
 export function ContactInfoSidebar() {
   return (
