@@ -8,7 +8,6 @@ import {
   FOOTER_SERVICES,
   FOOTER_COMPANY_LINKS,
   FOOTER_RESOURCES,
-  FOOTER_CERTIFICATIONS,
 } from '@/constants/service';
 import { SocialLink } from '@/types/service.types';
 import ScrollToTop from './ScrollToTop';
@@ -155,12 +154,12 @@ export default function Footer() {
           </ul>
         </section>
 
-        {/* Column 4: Resources (Plain Text List) & Certifications */}
+        {/* Column 4: Resources (Plain Text List) */}
         <section className="flex flex-col gap-4">
           <h3 className="text-white font-bold tracking-wide text-base">
             Resources
           </h3>
-          <ul className="flex flex-col gap-3 text-sm text-slate-400 select-none mb-4">
+          <ul className="flex flex-col gap-3 text-sm text-slate-400 select-none">
             {FOOTER_RESOURCES.map((resource) => (
               <li
                 key={resource}
@@ -170,21 +169,6 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-
-          {/* Certifications Block */}
-          <h4 className="text-white font-bold tracking-wide text-base pt-2">
-            Certifications
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {FOOTER_CERTIFICATIONS.map((badge) => (
-              <span
-                key={badge}
-                className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/60 border text-electricBlue select-none"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
         </section>
       </div>
 

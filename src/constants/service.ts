@@ -95,16 +95,6 @@ export const FOOTER_SOCIALS: SocialLink[] = [
     icon: 'Ln',
   },
   { platform: 'X (Twitter)', href: 'https://x.com/ProlaunchTech', icon: 'tw' },
-  {
-    platform: 'Instagram',
-    href: 'https://instagram.com/ProlaunchTech',
-    icon: 'ins',
-  },
-  {
-    platform: 'Facebook',
-    href: 'https://facebook.com/ProlaunchTech',
-    icon: 'fb',
-  },
 ];
 
 export const FOOTER_CONTACT: ContactInfo = {
@@ -133,11 +123,6 @@ export const FOOTER_COMPANY_LINKS: FooterLink[] = [
 export const FOOTER_RESOURCES: string[] = [
   'Privacy Policy',
   'Terms of Service',
-];
-
-export const FOOTER_CERTIFICATIONS: string[] = [
-  'Would be updated',
-  'would be updated',
 ];
 
 // Mission cards for Who We Are section for the About page
