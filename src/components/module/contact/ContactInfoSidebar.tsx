@@ -99,7 +99,7 @@ export function ContactInfoSidebar() {
               SOCIAL MEDIA
             </h4>
             <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 mt-0.5 font-sans">
-              LinkedIn · Instagram · Twitter / X · Facebook
+              LinkedIn · Twitter / X
             </p>
           </div>
         </motion.div>
